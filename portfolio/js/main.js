@@ -100,3 +100,17 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// CV download with language detection
+const downloadCvBtn = document.getElementById('btnDownloadCv');
+if (downloadCvBtn) {
+    downloadCvBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const currentLang = getLanguage();
+        const cvFile = currentLang === 'es' ? 'Julian_Restrepo_CV_EN.pdf' : 'Julian_Restrepo_CV_ES.pdf';
+        const cvLink = document.createElement('a');
+        cvLink.href = `./resources/cv/${cvFile}`;
+        cvLink.download = cvFile;
+        cvLink.click();
+    });
+}
