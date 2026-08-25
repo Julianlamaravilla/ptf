@@ -47,10 +47,14 @@ const translations = {
         projects_title: "Featured Projects",
         projects_subtitle: "Work that demonstrates my expertise",
         projects_adkio_title: "Adkio",
-        projects_adkio_desc: "<strong>Intelligent Ad Orchestrator</strong> that converts natural language into automated advertising campaigns for companies.",
+        projects_adkio_desc: "<strong>AI agent</strong> that plans and launches campaigns on Meta, TikTok, and Google Ads from natural language, with human approval before publishing.",
         projects_erp_title: "ERP Kidar",
         projects_erp_desc: "<strong>Enterprise system</strong> built with clean architecture, AWS integration, and agentic flows for process automation.",
         projects_erp_note: "*Corporate project - Private code",
+        projects_jojun_title: "Jojun",
+        projects_jojun_desc: "<strong>P2P clipboard for the terminal</strong>: two laptops join the same room, one sends a snippet and the other receives it. No Discord, USB, or server.",
+        projects_argenta_title: "Argenta Health Care",
+        projects_argenta_desc: "<strong>Institutional hospital demo.</strong> The UI looks like a real product: services home, doctor directory, locations, scheduling, patient portal, payments, telemedicine, ES/EN, and accessibility controls. Built with Vite and mock data — no clinical backend.",
         projects_link_github: "GitHub",
         projects_link_demo: "Demo",
 
@@ -111,10 +115,14 @@ const translations = {
         projects_title: "Proyectos Destacados",
         projects_subtitle: "Trabajo que demuestra mi expertise",
         projects_adkio_title: "Adkio",
-        projects_adkio_desc: "<strong>Orquestador Inteligente de Anuncios</strong> que convierte lenguaje natural en campañas publicitarias automáticas para empresas.",
+        projects_adkio_desc: "<strong>Agente de IA</strong> que planifica y lanza campañas en Meta, TikTok y Google Ads desde lenguaje natural, con aprobación humana antes de publicar.",
         projects_erp_title: "ERP Kidar",
         projects_erp_desc: "<strong>Sistema empresarial</strong> construido con arquitectura limpia, integración AWS, y flujos agénticos para automatización de procesos.",
         projects_erp_note: "*Proyecto corporativo - Código privado",
+        projects_jojun_title: "Jojun",
+        projects_jojun_desc: "<strong>Portapapeles P2P para la terminal</strong>: dos laptops se conectan a la misma sala, una envía un snippet y la otra lo recibe. Sin Discord, USB ni servidor.",
+        projects_argenta_title: "Argenta Health Care",
+        projects_argenta_desc: "<strong>Sitio demo de Argenta Health Care.</strong> La interfaz parece un producto real: home de servicios, directorio médico, sedes, agendamiento, portal del paciente, pagos, telemedicina, bilingüe ES/EN y controles de accesibilidad. Hecha con Vite y datos mock, sin backend clínico.",
         projects_link_github: "GitHub",
         projects_link_demo: "Demo",
 
@@ -200,15 +208,24 @@ function updatePageLanguage(lang) {
     aboutHeaders[3].querySelector('h2').textContent = t.projects_title;
     aboutHeaders[3].querySelector('p').textContent = t.projects_subtitle;
 
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards[0].querySelector('h3').textContent = t.projects_adkio_title;
-    projectCards[0].querySelector('p').innerHTML = t.projects_adkio_desc;
-    projectCards[1].querySelector('h3').textContent = t.projects_erp_title;
-    projectCards[1].querySelector('p').innerHTML = t.projects_erp_desc;
-    const projectNotes = document.querySelectorAll('.project-card p[style*="color"]');
-    if (projectNotes[projectNotes.length - 1]) {
-        projectNotes[projectNotes.length - 1].textContent = t.projects_erp_note;
-    }
+    const projectCopy = {
+        adkio: { title: t.projects_adkio_title, desc: t.projects_adkio_desc },
+        erp: { title: t.projects_erp_title, desc: t.projects_erp_desc, note: t.projects_erp_note },
+        jojun: { title: t.projects_jojun_title, desc: t.projects_jojun_desc },
+        argenta: { title: t.projects_argenta_title, desc: t.projects_argenta_desc },
+    };
+
+    document.querySelectorAll('.project-card').forEach((card) => {
+        const copy = projectCopy[card.dataset.project];
+        if (!copy) return;
+        card.querySelector('h3').textContent = copy.title;
+        const description = card.querySelector('.project-content > p');
+        if (description) description.innerHTML = copy.desc;
+        if (copy.note) {
+            const note = card.querySelector('.project-note');
+            if (note) note.textContent = copy.note;
+        }
+    });
 
     // Contact Section
     document.querySelector('.contact-container h2').textContent = t.contact_title;

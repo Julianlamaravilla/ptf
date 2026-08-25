@@ -7,7 +7,7 @@ Este directorio contiene toda la información recopilada en la **ENTREVISTA** pa
 - **01-identity.md** - Información personal, nombre, rol, empresa actual
 - **02-specialty.md** - Especialidad técnica, stack tecnológico, problemas que resuelves
 - **03-experience.md** - Experiencia laboral, competencias desarrolladas en Kidar
-- **04-projects.md** - Proyectos destacados (Adkio y otros)
+- **04-projects.md** - Proyectos destacados (Adkio, ERP Kidar, Jojun, Argenta)
 - **05-contact.md** - Información de contacto y redes
 - **06-style.md** - Preferencias de diseño y tono del portafolio
 
@@ -19,7 +19,7 @@ Este directorio contiene toda la información recopilada en la **ENTREVISTA** pa
 | **Rol** | Junior Software Engineer @ Kidar |
 | **Especialidad** | Backend + IA Agentica (Python/FastAPI) |
 | **Stack** | Python, React.js, AWS, Anthropic AI, MySQL |
-| **Proyecto Público** | Adkio (Orquestador de Anuncios con IA) |
+| **Proyectos públicos** | Adkio, Jojun, Argenta Health Care |
 | **Email** | julianrestrepo012@gmail.com |
 | **GitHub** | https://github.com/Andss-ye/Adkio |
 | **Estilo** | Corporativo + Creativo |

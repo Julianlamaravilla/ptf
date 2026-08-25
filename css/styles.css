@@ -454,6 +454,7 @@ body {
     padding: 0;
     text-align: center;
     border-bottom: 1px solid var(--border);
+    height: 200px;
     min-height: 200px;
     display: flex;
     align-items: center;
@@ -463,7 +464,7 @@ body {
 }
 
 .project-header img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
