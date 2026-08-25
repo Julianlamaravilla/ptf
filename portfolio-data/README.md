@@ -21,7 +21,7 @@ Este directorio contiene toda la información recopilada en la **ENTREVISTA** pa
 | **Stack** | Python, React.js, AWS, Anthropic AI, MySQL |
 | **Proyectos públicos** | Adkio, Jojun, Argenta Health Care |
 | **Email** | julianrestrepo012@gmail.com |
-| **GitHub** | https://github.com/Andss-ye/Adkio |
+| **GitHub** | https://github.com/Julianlamaravilla |
 | **Estilo** | Corporativo + Creativo |
 
 ## 🎯 Próximos Pasos

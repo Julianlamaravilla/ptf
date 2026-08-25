@@ -7,7 +7,7 @@
 ## Redes y Plataformas
 
 ### 🐙 GitHub
-- **URL:** https://github.com/Andss-ye/Adkio
+- **URL:** https://github.com/Julianlamaravilla
 - **Descripción:** Portfolio de proyectos públicos, contribuciones open-source, y demostración de código
 
 ### 💼 LinkedIn
