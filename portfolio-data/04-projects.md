@@ -38,7 +38,7 @@ Agente de IA que planifica y lanza campañas en Meta, TikTok y Google Ads desde 
 - **GitHub:** https://github.com/Andss-ye/Adkio
 
 ### Demo/Live
-- https://adkio-frontend.onrender.com
+- https://adkio.pages.dev/
 
 ---
 
