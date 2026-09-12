@@ -46,34 +46,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll animation for sections
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe all sections and cards
-document.querySelectorAll('.section, .project-card, .experience-card, .skill-category').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+// Note: scroll-reveal entrance animations for sections/cards are handled by
+// GSAP + ScrollTrigger in ./js/animations.js (loaded before this file).
 
 // Add navbar shadow on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 0) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
     } else {
         navbar.style.boxShadow = 'none';
     }
@@ -94,7 +74,7 @@ window.addEventListener('scroll', () => {
             navItems.forEach(item => {
                 item.style.color = 'var(--text-secondary)';
                 if (item.getAttribute('href') === `#${sectionId}`) {
-                    item.style.color = 'var(--accent-primary)';
+                    item.style.color = 'var(--text-primary)';
                 }
             });
         }
