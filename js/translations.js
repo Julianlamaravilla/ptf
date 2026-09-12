@@ -16,6 +16,7 @@ const translations = {
         hero_cta_projects: "View Projects",
         hero_cta_contact: "Contact",
         hero_cta_download: "Download CV",
+        hero_availability: "Open to opportunities",
 
         // About Section
         about_title: "About me",
@@ -59,7 +60,7 @@ const translations = {
         projects_adkio_desc: "Automated advertising campaign orchestrator converting <strong>natural language specifications</strong> into multi-channel marketing campaigns (Meta, TikTok, Google Ads) using Anthropic AI agents behind a REST API, with human approval before publishing.",
         projects_erp_title: "ERP Kidar",
         projects_erp_desc: "<strong>Enterprise system</strong> built with clean architecture, AWS integration, and agentic flows for process automation.",
-        projects_erp_note: "*Corporate project - Private code",
+        projects_erp_note: "Corporate project — Private code",
         projects_jojun_title: "Jojun",
         projects_jojun_desc: "<strong>P2P clipboard for the terminal</strong>: two laptops join the same room, one sends a snippet and the other receives it. No Discord, USB, or server.",
         projects_argenta_title: "Argenta Health Care",
@@ -84,7 +85,7 @@ const translations = {
         contact_cta_linkedin: "Connect on LinkedIn",
 
         // Footer
-        footer_text: "© 2026 Julián Andrés Restrepo Castaño. Professional design • Built with attention to detail.",
+        footer_text: "© 2026 Julián Andrés Restrepo Castaño. Built with attention to detail.",
     },
     es: {
         // Navigation
@@ -103,6 +104,7 @@ const translations = {
         hero_cta_projects: "Ver Proyectos",
         hero_cta_contact: "Contacto",
         hero_cta_download: "Descargar CV",
+        hero_availability: "Disponible para oportunidades",
 
         // About Section
         about_title: "Sobre mí",
@@ -146,7 +148,7 @@ const translations = {
         projects_adkio_desc: "Orquestador automatizado de campañas publicitarias que convierte <strong>especificaciones en lenguaje natural</strong> en campañas multicanal (Meta, TikTok, Google Ads) usando agentes de IA de Anthropic tras una API REST, con aprobación humana antes de publicar.",
         projects_erp_title: "ERP Kidar",
         projects_erp_desc: "<strong>Sistema empresarial</strong> construido con arquitectura limpia, integración AWS, y flujos agénticos para automatización de procesos.",
-        projects_erp_note: "*Proyecto corporativo - Código privado",
+        projects_erp_note: "Proyecto corporativo — Código privado",
         projects_jojun_title: "Jojun",
         projects_jojun_desc: "<strong>Portapapeles P2P para la terminal</strong>: dos laptops se conectan a la misma sala, una envía un snippet y la otra lo recibe. Sin Discord, USB ni servidor.",
         projects_argenta_title: "Argenta Health Care",
@@ -171,7 +173,7 @@ const translations = {
         contact_cta_linkedin: "Conectar en LinkedIn",
 
         // Footer
-        footer_text: "© 2026 Julián Andrés Restrepo Castaño. Diseño profesional • Construido con atención al detalle.",
+        footer_text: "© 2026 Julián Andrés Restrepo Castaño. Construido con atención al detalle.",
     }
 };
 
@@ -205,6 +207,9 @@ function updatePageLanguage(lang) {
     document.getElementById('btnViewProjects').textContent = t.hero_cta_projects;
     document.getElementById('btnContact').textContent = t.hero_cta_contact;
     document.getElementById('btnDownloadCv').textContent = t.hero_cta_download;
+
+    const availBadge = document.querySelector('.hero-availability');
+    if (availBadge) availBadge.textContent = t.hero_availability;
 
     // About Section
     const aboutHeaders = document.querySelectorAll('.section-header');
@@ -266,9 +271,9 @@ function updatePageLanguage(lang) {
     aboutHeaders[3].querySelector('p').textContent = t.projects_subtitle;
 
     const projectCopy = {
-        adkio: { title: t.projects_adkio_title, desc: t.projects_adkio_desc },
-        erp: { title: t.projects_erp_title, desc: t.projects_erp_desc, note: t.projects_erp_note },
-        jojun: { title: t.projects_jojun_title, desc: t.projects_jojun_desc },
+        adkio:   { title: t.projects_adkio_title,   desc: t.projects_adkio_desc },
+        erp:     { title: t.projects_erp_title,     desc: t.projects_erp_desc,   note: t.projects_erp_note },
+        jojun:   { title: t.projects_jojun_title,   desc: t.projects_jojun_desc },
         argenta: { title: t.projects_argenta_title, desc: t.projects_argenta_desc },
     };
 
@@ -302,11 +307,12 @@ function updatePageLanguage(lang) {
     }
 
     // Contact Section
-    document.querySelector('.contact-container h2').textContent = t.contact_title;
-    document.querySelector('.contact-container > p').textContent = t.contact_subtitle;
+    document.querySelector('.contact-banner h2').textContent = t.contact_title;
+    const contactSubtitle = document.querySelector('.contact-subtitle');
+    if (contactSubtitle) contactSubtitle.textContent = t.contact_subtitle;
     const contactBtns = document.querySelectorAll('.contact-cta .btn');
-    contactBtns[0].textContent = t.contact_cta_email;
-    contactBtns[1].textContent = t.contact_cta_linkedin;
+    if (contactBtns[0]) contactBtns[0].textContent = t.contact_cta_email;
+    if (contactBtns[1]) contactBtns[1].textContent = t.contact_cta_linkedin;
 
     // Footer
     document.querySelector('.footer p').textContent = t.footer_text;

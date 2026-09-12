@@ -4,320 +4,486 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julián Restrepo - Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/translations.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container navbar-content">
-            <div class="logo">JAR</div>
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links" id="navLinks">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
-                <button id="languageBtn" class="language-btn">ES</button>
+
+<!-- =============================================
+     SVG SPRITE — trazo 1.5 px, 24 × 24 viewport
+     ============================================= -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+
+    <!-- mail -->
+    <symbol id="icon-mail" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- arrow northeast (diagonal up-right) — project card CTA -->
+    <symbol id="icon-arrow-ne" viewBox="0 0 24 24" fill="none">
+        <path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- layers — stats: projects -->
+    <symbol id="icon-layers" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- clock — stats: dev/QA cycle -->
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- chart-up — stats: savings -->
+    <symbol id="icon-chart" viewBox="0 0 24 24" fill="none">
+        <polyline points="22,12 18,8 13,13 9,9 2,16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="18,8 22,8 22,12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- code </> — stats: lines refactored -->
+    <symbol id="icon-code" viewBox="0 0 24 24" fill="none">
+        <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- book — education category -->
+    <symbol id="icon-book" viewBox="0 0 24 24" fill="none">
+        <path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5v14z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M4 19.5A2.5 2.5 0 016.5 22H20" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <line x1="9" y1="3" x2="9" y2="17" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+
+    <!-- check-circle — certifications category -->
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- globe — languages category -->
+    <symbol id="icon-globe" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12 3c-3.5 4.5-3.5 13.5 0 18M12 3c3.5 4.5 3.5 13.5 0 18M3 12h18" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+
+    <!-- github — contact & footer -->
+    <symbol id="icon-github" viewBox="0 0 24 24" fill="none">
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- linkedin — contact & footer -->
+    <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="none">
+        <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="8" y1="11" x2="8" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="8" y1="8" x2="8" y2="8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M12 16v-5M12 11a3 3 0 016 0v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- external-link -->
+    <symbol id="icon-link" viewBox="0 0 24 24" fill="none">
+        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+</svg>
+
+<!-- =============================================
+     NAVIGATION
+     ============================================= -->
+<nav class="navbar">
+    <div class="container navbar-content">
+        <div class="logo">JAR</div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <button id="languageBtn" class="language-btn">ES</button>
+        </div>
+    </div>
+</nav>
+
+<!-- =============================================
+     HERO
+     ============================================= -->
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <span class="hero-badge">Software Engineer | Full-Stack, Cloud &amp; AI Agentic Systems</span>
+            <h1>I Transform Business Problems into AI Solutions</h1>
+            <p>Full-stack &amp; AI Agentic Systems engineer. I architect scalable SaaS platforms and AI-driven data frameworks with Python, FastAPI, AWS and Anthropic models that generate measurable business impact.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary" id="btnViewProjects">View Projects</a>
+                <a href="#contact" class="btn btn-secondary" id="btnContact">Contact</a>
+                <button class="btn btn-secondary" id="btnDownloadCv">Download CV</button>
             </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <span class="hero-badge">Software Engineer | Full-Stack, Cloud & AI Agentic Systems</span>
-                <h1>I Transform Business Problems into AI Solutions</h1>
-                <p>Full-stack & AI Agentic Systems engineer. I architect scalable SaaS platforms and AI-driven data frameworks with Python, FastAPI, AWS and Anthropic models that generate measurable business impact.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary" id="btnViewProjects">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary" id="btnContact">Contact</a>
-                    <button class="btn btn-secondary" id="btnDownloadCv">Download CV</button>
-                </div>
-            </div>
-            <div class="hero-visual">
+        <div class="hero-visual">
+            <div class="hero-visual-inner">
                 <img src="./resources/pictures/JAR1.jpeg" alt="Julián Andrés Restrepo">
+                <div class="hero-availability">Open to opportunities</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About me</h2>
-                <p>My passion for solving complex business problems</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-avatar">
-                    <img src="./resources/pictures/JAR2.jpeg" alt="Julián Andrés Restrepo">
-                </div>
-                <div class="about-content">
-                    <h3>Julián Andrés Restrepo Castaño</h3>
-                    <p>Results-driven Software Engineer with hands-on expertise building <strong>scalable cloud architectures, full-stack web applications, enterprise SaaS solutions, and Agentic AI systems</strong>.</p>
-                    <p>At <strong>Kidar</strong>, I architected core SaaS platforms (ERP and Time Management) that reduced operational friction, saved <strong>$18,000 USD annually</strong>, and accelerated project management workflows by <strong>20%</strong>.</p>
-                    <p>As Lead Software Engineer at <strong>Scala / DataCrédito Experian</strong>, I designed a core AI Data Ingestion Framework that reduced overall development and QA cycles by over <strong>50%</strong>.</p>
-                    <p>Deep expertise in <strong>Python (FastAPI), Java (Spring Boot), React, AWS Cloud infrastructure</strong>, and modern AI Development Lifecycles (AI-DLC).</p>
-                    <p>Full-stack engineer capable of owning problems end-to-end: backend, frontend, cloud infrastructure, and AI system design.</p>
-                </div>
+<!-- =============================================
+     ABOUT
+     ============================================= -->
+<section id="about" class="section about-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>About me</h2>
+            <p>My passion for solving complex business problems</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-content">
+                <h3>Julián Andrés Restrepo Castaño</h3>
+                <p>Results-driven Software Engineer with hands-on expertise building <strong>scalable cloud architectures, full-stack web applications, enterprise SaaS solutions, and Agentic AI systems</strong>.</p>
+                <p>At <strong>Kidar</strong>, I architected core SaaS platforms (ERP and Time Management) that reduced operational friction, saved <strong>$18,000 USD annually</strong>, and accelerated project management workflows by <strong>20%</strong>.</p>
+                <p>As Lead Software Engineer at <strong>Scala / DataCrédito Experian</strong>, I designed a core AI Data Ingestion Framework that reduced overall development and QA cycles by over <strong>50%</strong>.</p>
+                <p>Deep expertise in <strong>Python (FastAPI), Java (Spring Boot), React, AWS Cloud infrastructure</strong>, and modern AI Development Lifecycles (AI-DLC).</p>
+                <p>Full-stack engineer capable of owning problems end-to-end: backend, frontend, cloud infrastructure, and AI system design.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Skills & Tech Stack</h2>
-                <p>Tools and technologies I master</p>
+<!-- =============================================
+     SKILLS
+     ============================================= -->
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Skills &amp; Tech Stack</h2>
+            <p>Tools and technologies I master</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Primary Languages &amp; Frameworks</h3>
+                <ul class="skill-list">
+                    <li>Python (FastAPI)</li>
+                    <li>Java (Spring Boot)</li>
+                    <li>React.js</li>
+                    <li>MySQL</li>
+                </ul>
             </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Primary Languages & Frameworks</h3>
-                    <ul class="skill-list">
-                        <li>Python (FastAPI)</li>
-                        <li>Java (Spring Boot)</li>
-                        <li>React.js</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Secondary Languages & Tools</h3>
-                    <ul class="skill-list">
-                        <li>Node.js</li>
-                        <li>TypeScript</li>
-                        <li>JavaScript</li>
-                        <li>MongoDB</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & DevOps (AWS)</h3>
-                    <ul class="skill-list">
-                        <li>S3, EKS, ECS</li>
-                        <li>Aurora DB, Bedrock</li>
-                        <li>Lambda, EC2, API Gateway</li>
-                        <li>VPC, Docker, CI/CD</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>AI & Agentic Systems</h3>
-                    <ul class="skill-list">
-                        <li>Agentic System Design</li>
-                        <li>RAGs & Vector Databases</li>
-                        <li>Anthropic Models, LiteLLM</li>
-                        <li>AI-DLC, ML & DL Fundamentals</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Domain & Theoretical Knowledge</h3>
-                    <ul class="skill-list">
-                        <li>Information Security Systems</li>
-                        <li>Big Data Engineering</li>
-                        <li>Project Management</li>
-                    </ul>
-                </div>
+            <div class="skill-category">
+                <h3>Secondary Languages &amp; Tools</h3>
+                <ul class="skill-list">
+                    <li>Node.js</li>
+                    <li>TypeScript</li>
+                    <li>JavaScript</li>
+                    <li>MongoDB</li>
+                </ul>
             </div>
-            <div class="methodologies">
-                <h3>Methodologies</h3>
-                <div class="methodologies-grid">
-                    <div class="methodology-item">
-                        <p>Clean Architecture</p>
-                    </div>
-                    <div class="methodology-item">
-                        <p>Spec-Driven Development (SDD)</p>
-                    </div>
-                    <div class="methodology-item">
-                        <p>Test-Driven Development (TDD)</p>
-                    </div>
-                    <div class="methodology-item">
-                        <p>Behavior-Driven Development (BDD)</p>
-                    </div>
-                    <div class="methodology-item">
-                        <p>Domain-Driven Design (DDD)</p>
-                    </div>
-                </div>
+            <div class="skill-category">
+                <h3>Cloud &amp; DevOps (AWS)</h3>
+                <ul class="skill-list">
+                    <li>S3, EKS, ECS</li>
+                    <li>Aurora DB, Bedrock</li>
+                    <li>Lambda, EC2, API Gateway</li>
+                    <li>VPC, Docker, CI/CD</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>AI &amp; Agentic Systems</h3>
+                <ul class="skill-list">
+                    <li>Agentic System Design</li>
+                    <li>RAGs &amp; Vector Databases</li>
+                    <li>Anthropic Models, LiteLLM</li>
+                    <li>AI-DLC, ML &amp; DL Fundamentals</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Domain &amp; Theoretical Knowledge</h3>
+                <ul class="skill-list">
+                    <li>Information Security Systems</li>
+                    <li>Big Data Engineering</li>
+                    <li>Project Management</li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section experience-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Experience</h2>
-                <p>My professional journey</p>
-            </div>
-            <div class="experience-container">
-                <div class="experience-card" data-role="scala">
-                    <div class="experience-meta">Lead / Principal Software Engineer • Scala / DataCrédito Experian (2026 – Present)</div>
-                    <h3>Core AI Data Ingestion Framework</h3>
-                    <p><strong>Core AI Ingestion Framework:</strong> Spearheaded as Principal Software Engineer the architecture and development of an AI-driven Data Ingestion Framework for Scala (the foundational data backbone of Experian), decreasing Data Engineering development and QA lead time by over <strong>50%</strong>.</p>
-                    <p><strong>Credit Interface Personalization Chatbot:</strong> Co-designed and engineered an interactive AI chatbot integrated into Experian / DataCrédito platforms to deliver personalized credit interfaces and user experiences.</p>
-                    <p><strong>Enterprise AI Integration:</strong> Designed scalable, secure AI pipeline interfaces ensuring robust security standards and compliance within large-scale financial data ingestion processes.</p>
-                </div>
-                <div class="experience-card" data-role="kidar">
-                    <div class="experience-meta">Software Engineer • Kidar (April 2026 – Present)</div>
-                    <h3>Core SaaS Platforms & Enterprise Architecture</h3>
-                    <p><strong>Core SaaS Architecture & Cost Optimization:</strong> Built from the ground up two core internal SaaS platforms (ERP & Time Manager) utilizing Python (FastAPI), MySQL, and AWS, saving <strong>$18,000 USD/year</strong> and cutting project management cycle times by <strong>20%</strong>.</p>
-                    <p><strong>Enterprise Data Workflows:</strong> Streamlined company-wide data architecture and internal information pipelines, driving cross-functional synchronization and operational efficiency.</p>
-                    <p><strong>Legacy Refactoring & Quality:</strong> Refactored over <strong>20,000 lines</strong> of legacy code to Clean Architecture within 3 weeks, reducing ongoing feature development time by <strong>40%</strong>.</p>
-                    <p><strong>Serverless AI Proof of Concept:</strong> Designed and deployed a serverless PoC using AWS Lambda and Bedrock AgentCore, accelerating team technical exploration by <strong>2 weeks</strong>.</p>
-                </div>
+        <div class="methodologies">
+            <h3>Methodologies</h3>
+            <div class="methodologies-grid">
+                <div class="methodology-item"><p>Clean Architecture</p></div>
+                <div class="methodology-item"><p>Spec-Driven Development (SDD)</p></div>
+                <div class="methodology-item"><p>Test-Driven Development (TDD)</p></div>
+                <div class="methodology-item"><p>Behavior-Driven Development (BDD)</p></div>
+                <div class="methodology-item"><p>Domain-Driven Design (DDD)</p></div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Work that demonstrates my expertise</p>
+<!-- =============================================
+     EXPERIENCE
+     ============================================= -->
+<section id="experience" class="section experience-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Experience</h2>
+            <p>My professional journey</p>
+        </div>
+        <div class="experience-container">
+            <div class="experience-card" data-role="scala">
+                <span class="step-badge" aria-hidden="true">01</span>
+                <div class="experience-meta">Lead / Principal Software Engineer • Scala / DataCrédito Experian (2026 – Present)</div>
+                <h3>Core AI Data Ingestion Framework</h3>
+                <p><strong>Core AI Ingestion Framework:</strong> Spearheaded as Principal Software Engineer the architecture and development of an AI-driven Data Ingestion Framework for Scala (the foundational data backbone of Experian), decreasing Data Engineering development and QA lead time by over <strong>50%</strong>.</p>
+                <p><strong>Credit Interface Personalization Chatbot:</strong> Co-designed and engineered an interactive AI chatbot integrated into Experian / DataCrédito platforms to deliver personalized credit interfaces and user experiences.</p>
+                <p><strong>Enterprise AI Integration:</strong> Designed scalable, secure AI pipeline interfaces ensuring robust security standards and compliance within large-scale financial data ingestion processes.</p>
             </div>
-            <div class="projects-container">
-                <div class="project-card" data-project="adkio">
-                    <div class="project-header">
-                        <img src="./resources/adkio/AdkioPicture.png" alt="Adkio">
+            <div class="experience-card" data-role="kidar">
+                <span class="step-badge" aria-hidden="true">02</span>
+                <div class="experience-meta">Software Engineer • Kidar (April 2026 – Present)</div>
+                <h3>Core SaaS Platforms &amp; Enterprise Architecture</h3>
+                <p><strong>Core SaaS Architecture &amp; Cost Optimization:</strong> Built from the ground up two core internal SaaS platforms (ERP &amp; Time Manager) utilizing Python (FastAPI), MySQL, and AWS, saving <strong>$18,000 USD/year</strong> and cutting project management cycle times by <strong>20%</strong>.</p>
+                <p><strong>Enterprise Data Workflows:</strong> Streamlined company-wide data architecture and internal information pipelines, driving cross-functional synchronization and operational efficiency.</p>
+                <p><strong>Legacy Refactoring &amp; Quality:</strong> Refactored over <strong>20,000 lines</strong> of legacy code to Clean Architecture within 3 weeks, reducing ongoing feature development time by <strong>40%</strong>.</p>
+                <p><strong>Serverless AI Proof of Concept:</strong> Designed and deployed a serverless PoC using AWS Lambda and Bedrock AgentCore, accelerating team technical exploration by <strong>2 weeks</strong>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     PROJECTS
+     ============================================= -->
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p>Work that demonstrates my expertise</p>
+        </div>
+        <div class="projects-container">
+
+            <!-- Adkio -->
+            <div class="project-card" data-project="adkio">
+                <div class="project-header">
+                    <img src="./resources/adkio/AdkioPicture.png" alt="Adkio">
+                </div>
+                <div class="project-content">
+                    <h3>Adkio</h3>
+                    <p>Automated advertising campaign orchestrator converting <strong>natural language specifications</strong> into multi-channel marketing campaigns (Meta, TikTok, Google Ads) using Anthropic AI agents behind a REST API, with human approval before publishing.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Anthropic</span>
+                        <span class="tech-tag">Docker</span>
                     </div>
-                    <div class="project-content">
-                        <h3>Adkio</h3>
-                        <p>Automated advertising campaign orchestrator converting <strong>natural language specifications</strong> into multi-channel marketing campaigns (Meta, TikTok, Google Ads) using Anthropic AI agents behind a REST API, with human approval before publishing.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Anthropic</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                        <div class="project-links">
+                    <div class="project-links">
+                        <div class="project-links-text">
                             <a href="https://github.com/Andss-ye/Adkio" target="_blank" rel="noopener noreferrer">GitHub</a>
                             <a href="https://adkio-frontend.onrender.com" target="_blank" rel="noopener noreferrer">Demo</a>
                         </div>
+                        <a href="https://adkio-frontend.onrender.com" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View Adkio demo">
+                            <svg><use href="#icon-arrow-ne"/></svg>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card" data-project="erp">
-                    <div class="project-header">
-                        <img src="./resources/ERP/KidarERPPicture.png" alt="Kidar ERP">
+            </div>
+
+            <!-- ERP Kidar -->
+            <div class="project-card" data-project="erp">
+                <div class="project-header">
+                    <img src="./resources/ERP/KidarERPPicture.png" alt="Kidar ERP">
+                </div>
+                <div class="project-content">
+                    <h3>ERP Kidar</h3>
+                    <p><strong>Enterprise system</strong> built with clean architecture, AWS integration, and agentic flows for process automation.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Bedrock</span>
                     </div>
-                    <div class="project-content">
-                        <h3>ERP Kidar</h3>
-                        <p><strong>Enterprise system</strong> built with clean architecture, AWS integration, and agentic flows for process automation.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Bedrock</span>
+                    <div class="project-links">
+                        <div class="project-links-text">
+                            <span class="project-note">Corporate project — Private code</span>
                         </div>
-                        <p class="project-note" style="color: var(--text-secondary); font-size: 0.85rem; margin-top: var(--spacing-md);">*Corporate project - Private code</p>
                     </div>
                 </div>
-                <div class="project-card" data-project="jojun">
-                    <div class="project-header">
-                        <img src="./resources/jojun/JojunPicture.png" alt="Jojun">
+            </div>
+
+            <!-- Jojun -->
+            <div class="project-card" data-project="jojun">
+                <div class="project-header">
+                    <img src="./resources/jojun/JojunPicture.png" alt="Jojun">
+                </div>
+                <div class="project-content">
+                    <h3>Jojun</h3>
+                    <p><strong>P2P clipboard for the terminal</strong>: two laptops join the same room, one sends a snippet and the other receives it. No Discord, USB, or server.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Bare</span>
+                        <span class="tech-tag">Pear</span>
+                        <span class="tech-tag">Hyperswarm</span>
+                        <span class="tech-tag">JavaScript</span>
                     </div>
-                    <div class="project-content">
-                        <h3>Jojun</h3>
-                        <p><strong>P2P clipboard for the terminal</strong>: two laptops join the same room, one sends a snippet and the other receives it. No Discord, USB, or server.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Bare</span>
-                            <span class="tech-tag">Pear</span>
-                            <span class="tech-tag">Hyperswarm</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
+                    <div class="project-links">
+                        <div class="project-links-text">
                             <a href="https://github.com/Organization-Jojun/joju-cli" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
+                        <a href="https://github.com/Organization-Jojun/joju-cli" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View Jojun on GitHub">
+                            <svg><use href="#icon-arrow-ne"/></svg>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card" data-project="argenta">
-                    <div class="project-header">
-                        <img src="./resources/argenta/ArgentaPicture.png" alt="Argenta Health Care">
+            </div>
+
+            <!-- Argenta -->
+            <div class="project-card" data-project="argenta">
+                <div class="project-header">
+                    <img src="./resources/argenta/ArgentaPicture.png" alt="Argenta Health Care">
+                </div>
+                <div class="project-content">
+                    <h3>Argenta Health Care</h3>
+                    <p><strong>Institutional hospital demo.</strong> The UI looks like a real product: services home, doctor directory, locations, scheduling, patient portal, payments, telemedicine, ES/EN, and accessibility controls. Built with Vite and mock data — no clinical backend.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Vite</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Cloudflare</span>
                     </div>
-                    <div class="project-content">
-                        <h3>Argenta Health Care</h3>
-                        <p><strong>Institutional hospital demo.</strong> The UI looks like a real product: services home, doctor directory, locations, scheduling, patient portal, payments, telemedicine, ES/EN, and accessibility controls. Built with Vite and mock data — no clinical backend.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Vite</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">Cloudflare</span>
-                        </div>
-                        <div class="project-links">
+                    <div class="project-links">
+                        <div class="project-links-text">
                             <a href="https://github.com/Julianlamaravilla/ArgentaWebsite" target="_blank" rel="noopener noreferrer">GitHub</a>
                             <a href="https://argenta.julianrestrepo012.workers.dev/" target="_blank" rel="noopener noreferrer">Demo</a>
                         </div>
+                        <a href="https://argenta.julianrestrepo012.workers.dev/" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View Argenta demo">
+                            <svg><use href="#icon-arrow-ne"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Education & Certifications Section -->
-    <section id="education" class="section education-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Education & Certifications</h2>
-                <p>Academic background and professional certifications</p>
-            </div>
-            <div class="skills-container">
-                <div class="skill-category">
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     EDUCATION & CERTIFICATIONS
+     ============================================= -->
+<section id="education" class="section education-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Education &amp; Certifications</h2>
+            <p>Academic background and professional certifications</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <div class="edu-category-header">
+                    <div class="edu-cat-icon">
+                        <svg><use href="#icon-book"/></svg>
+                    </div>
                     <h3>Education</h3>
-                    <ul class="skill-list">
-                        <li><strong>B.S. in Systems Engineering</strong><br>Universidad EAN — 6th Semester, In Progress<br>Bogotá, Colombia</li>
-                        <li><strong>Technical Degree in Software Programming</strong><br>Completed</li>
-                    </ul>
                 </div>
-                <div class="skill-category">
+                <ul class="skill-list">
+                    <li><strong>B.S. in Systems Engineering</strong><br>Universidad EAN — 6th Semester, In Progress<br>Bogotá, Colombia</li>
+                    <li><strong>Technical Degree in Software Programming</strong><br>Completed</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <div class="edu-category-header">
+                    <div class="edu-cat-icon">
+                        <svg><use href="#icon-check"/></svg>
+                    </div>
                     <h3>Certifications</h3>
-                    <ul class="skill-list">
-                        <li>AWS Knowledge: AI-DLC Foundations — Amazon Web Services</li>
-                        <li>Full-Stack Engineering with JavaScript — CodeSignal</li>
-                        <li>AWS Cloud Foundations — Amazon Web Services</li>
-                    </ul>
                 </div>
-                <div class="skill-category">
+                <ul class="skill-list">
+                    <li>AWS Knowledge: AI-DLC Foundations — Amazon Web Services</li>
+                    <li>Full-Stack Engineering with JavaScript — CodeSignal</li>
+                    <li>AWS Cloud Foundations — Amazon Web Services</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <div class="edu-category-header">
+                    <div class="edu-cat-icon">
+                        <svg><use href="#icon-globe"/></svg>
+                    </div>
                     <h3>Languages</h3>
-                    <ul class="skill-list">
-                        <li>English — Professional / Advanced (C1/B2)</li>
-                        <li>Spanish — Native Speaker</li>
-                    </ul>
                 </div>
+                <ul class="skill-list">
+                    <li>English — Professional / Advanced (C1/B2)</li>
+                    <li>Spanish — Native Speaker</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="contact-container">
+<!-- =============================================
+     CONTACT — CTA banner with metallic gradient
+     ============================================= -->
+<section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="contact-banner">
+            <div class="contact-banner-left">
                 <h2>Let's Talk</h2>
-                <p>I am available for opportunities, technical consultations and collaborations in AI, backend and cloud architecture.</p>
+                <p class="contact-subtitle">I am available for opportunities, technical consultations and collaborations in AI, backend and cloud architecture.</p>
                 <div class="contact-cta">
                     <a href="mailto:julianrestrepo012@gmail.com" class="btn btn-primary">Send Email</a>
                     <a href="https://www.linkedin.com/in/jarestrepo/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Connect on LinkedIn</a>
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com/Julianlamaravilla" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://www.linkedin.com/in/jarestrepo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="mailto:julianrestrepo012@gmail.com">Email</a>
+            </div>
+            <div class="contact-banner-right">
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <svg><use href="#icon-mail"/></svg>
+                        <a href="mailto:julianrestrepo012@gmail.com">julianrestrepo012@gmail.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <svg><use href="#icon-linkedin"/></svg>
+                        <a href="https://www.linkedin.com/in/jarestrepo/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jarestrepo</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <svg><use href="#icon-github"/></svg>
+                        <a href="https://github.com/Julianlamaravilla" target="_blank" rel="noopener noreferrer">github.com/Julianlamaravilla</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Julián Andrés Restrepo Castaño. Professional design • Built with attention to detail.</p>
-    </footer>
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer class="footer">
+    <div class="container footer-content">
+        <p>&copy; 2026 Julián Andrés Restrepo Castaño. Built with attention to detail.</p>
+        <div class="footer-social">
+            <a href="https://github.com/Julianlamaravilla" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg><use href="#icon-github"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/jarestrepo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg><use href="#icon-linkedin"/></svg>
+            </a>
+            <a href="mailto:julianrestrepo012@gmail.com" aria-label="Email">
+                <svg><use href="#icon-mail"/></svg>
+            </a>
+        </div>
+    </div>
+</footer>
 
-    <script src="./js/main.js"></script>
+<script src="./js/vendor/gsap/gsap.min.js"></script>
+<script src="./js/vendor/gsap/ScrollTrigger.min.js"></script>
+<script src="./js/vendor/motion/motion.min.js"></script>
+<script src="./js/animations.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>
