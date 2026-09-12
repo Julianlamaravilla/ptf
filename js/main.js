@@ -109,7 +109,7 @@ if (downloadCvBtn) {
         const currentLang = getLanguage();
         const cvFile = currentLang === 'es' ? 'Julian_Restrepo_CV_ES.pdf' : 'Julian_Restrepo_CV_EN.pdf';
         const cvLink = document.createElement('a');
-        cvLink.href = `./resources/cv/${cvFile}`;
+        cvLink.href = `./files/${cvFile}`;
         cvLink.download = cvFile;
         cvLink.click();
     });
