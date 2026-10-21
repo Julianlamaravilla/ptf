@@ -259,7 +259,7 @@ function updatePageLanguage(lang) {
 
     // CV download links (nav + hero) follow the language
     const cvFile = lang === 'es' ? 'Julian_Restrepo_CV_ES.pdf' : 'Julian_Restrepo_CV_EN.pdf';
-    ['btnDownloadCv', 'btnDownloadCvNav'].forEach((id) => {
+    ['btnDownloadCv', 'btnDownloadCvNav', 'btnDownloadCvMobile'].forEach((id) => {
         const link = document.getElementById(id);
         if (!link) return;
         link.href = `./files/${cvFile}`;
@@ -273,7 +273,7 @@ function updatePageLanguage(lang) {
     $('#btnViewProjects').textContent = t.cta_projects;
     $('#btnContact').textContent = t.cta_contact;
     $('#btnDownloadCv span').textContent = t.cta_download;
-    $('#btnDownloadCvNav').setAttribute('aria-label', t.cta_download);
+    ['btnDownloadCvNav', 'btnDownloadCvMobile'].forEach((id) => document.getElementById(id).setAttribute('aria-label', t.cta_download));
     const availBadge = $('.hero-availability');
     if (availBadge) availBadge.textContent = t.avail;
 
