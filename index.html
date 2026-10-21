@@ -84,6 +84,11 @@
         <path d="M12 16v-5M12 11a3 3 0 016 0v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </symbol>
 
+    <!-- download — CV button -->
+    <symbol id="icon-download" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3v12M7 11l5 5 5-5M4 20h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
     <!-- external-link -->
     <symbol id="icon-link" viewBox="0 0 24 24" fill="none">
         <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -109,6 +114,7 @@
             <a href="#projects">Projects</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
+            <a href="./files/Julian_Restrepo_CV_EN.pdf" class="nav-cv-btn" id="btnDownloadCvNav" download aria-label="Download CV"><svg><use href="#icon-download"/></svg><span>CV</span></a>
             <button id="languageBtn" class="language-btn">ES</button>
         </div>
     </div>
@@ -120,13 +126,13 @@
 <section class="hero">
     <div class="container hero-grid">
         <div class="hero-content">
-            <span class="hero-badge">Software Engineer | Full-Stack, Cloud &amp; AI Agentic Systems</span>
-            <h1>I Transform Business Problems into AI Solutions</h1>
-            <p>Full-stack &amp; AI Agentic Systems engineer. I architect scalable SaaS platforms and AI-driven data frameworks with Python, FastAPI, AWS and Anthropic models that generate measurable business impact.</p>
+            <span class="hero-badge">Full-Stack Developer | Software Architecture &amp; AI</span>
+            <h1>I Build Complete Systems, from Data Model to Deployment</h1>
+            <p>Full-Stack Developer with strong command of software architecture and AI. 3+ years on enterprise financial-sector projects (DataCrédito Experian), shipping APIs, interfaces and AWS deployments with security by design (OWASP).</p>
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary" id="btnViewProjects">View Projects</a>
+                <a href="./files/Julian_Restrepo_CV_EN.pdf" class="btn btn-primary btn-download" id="btnDownloadCv" download><svg aria-hidden="true"><use href="#icon-download"/></svg><span>Download CV</span></a>
+                <a href="#projects" class="btn btn-secondary" id="btnViewProjects">View Projects</a>
                 <a href="#contact" class="btn btn-secondary" id="btnContact">Contact</a>
-                <button class="btn btn-secondary" id="btnDownloadCv">Download CV</button>
             </div>
         </div>
         <div class="hero-visual">
@@ -145,16 +151,16 @@
     <div class="container">
         <div class="section-header">
             <h2>About me</h2>
-            <p>My passion for solving complex business problems</p>
+            <p>Architecture, AI and end-to-end delivery</p>
         </div>
         <div class="about-grid">
             <div class="about-content">
                 <h3>Julián Andrés Restrepo Castaño</h3>
-                <p>Results-driven Software Engineer with hands-on expertise building <strong>scalable cloud architectures, full-stack web applications, enterprise SaaS solutions, and Agentic AI systems</strong>.</p>
-                <p>At <strong>Kidar</strong>, I architected core SaaS platforms (ERP and Time Management) that reduced operational friction, saved <strong>$18,000 USD annually</strong>, and accelerated project management workflows by <strong>20%</strong>.</p>
-                <p>As Lead Software Engineer at <strong>Scala / DataCrédito Experian</strong>, I designed a core AI Data Ingestion Framework that reduced overall development and QA cycles by over <strong>50%</strong>.</p>
-                <p>Deep expertise in <strong>Python (FastAPI), Java (Spring Boot), React, AWS Cloud infrastructure</strong>, and modern AI Development Lifecycles (AI-DLC).</p>
-                <p>Full-stack engineer capable of owning problems end-to-end: backend, frontend, cloud infrastructure, and AI system design.</p>
+                <p>Full-Stack Developer with broad command of <strong>software architecture and artificial intelligence</strong>, with more than three years of experience on enterprise projects in the financial sector (DataCrédito Experian).</p>
+                <p>At <strong>Kidar</strong> I built <strong>Bitácora</strong> from scratch (Spring Boot + React on AWS). It is now in production and saves <strong>USD 18,000 per year</strong>.</p>
+                <p>At <strong>DataCrédito Experian</strong> I took part in the design and development of an AI-assisted data ingestion framework for Scala, with ingestions <strong>over 50% faster</strong>, and in an AI chatbot that personalizes the credit interface.</p>
+                <p>I design and deliver complete systems, from the data model and APIs to the interface and deployment on AWS, with security as a requirement from design (<strong>OWASP</strong>) and agile methodologies (<strong>Scrum</strong>).</p>
+                <p>In parallel, I lead the <strong>Go backend</strong> of an accounting audit platform in Brazil.</p>
             </div>
         </div>
     </div>
@@ -171,58 +177,66 @@
         </div>
         <div class="skills-container">
             <div class="skill-category">
-                <h3>Primary Languages &amp; Frameworks</h3>
+                <h3>Architecture &amp; Backend</h3>
                 <ul class="skill-list">
+                    <li>Java, Spring Boot</li>
+                    <li>Go</li>
                     <li>Python (FastAPI)</li>
-                    <li>Java (Spring Boot)</li>
-                    <li>React.js</li>
-                    <li>MySQL</li>
+                    <li>REST APIs, Microservices</li>
+                    <li>Clean Architecture</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>Secondary Languages &amp; Tools</h3>
+                <h3>Frontend</h3>
                 <ul class="skill-list">
-                    <li>Node.js</li>
+                    <li>React</li>
+                    <li>Angular</li>
                     <li>TypeScript</li>
-                    <li>JavaScript</li>
-                    <li>MongoDB</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>Cloud &amp; DevOps (AWS)</h3>
+                <h3>AI</h3>
                 <ul class="skill-list">
-                    <li>S3, EKS, ECS</li>
-                    <li>Aurora DB, Bedrock</li>
-                    <li>Lambda, EC2, API Gateway</li>
-                    <li>VPC, Docker, CI/CD</li>
+                    <li>LLMs</li>
+                    <li>RAG</li>
+                    <li>AI agents</li>
+                    <li>Automation</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>AI &amp; Agentic Systems</h3>
+                <h3>Cloud &amp; DevOps</h3>
                 <ul class="skill-list">
-                    <li>Agentic System Design</li>
-                    <li>RAGs &amp; Vector Databases</li>
-                    <li>Anthropic Models, LiteLLM</li>
-                    <li>AI-DLC, ML &amp; DL Fundamentals</li>
+                    <li>AWS (ECS, API Gateway, Aurora, S3, Lambda)</li>
+                    <li>Docker, CI/CD</li>
+                    <li>Git, Azure DevOps</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>Domain &amp; Theoretical Knowledge</h3>
+                <h3>Data &amp; Testing</h3>
                 <ul class="skill-list">
-                    <li>Information Security Systems</li>
-                    <li>Big Data Engineering</li>
-                    <li>Project Management</li>
+                    <li>MySQL, PostgreSQL</li>
+                    <li>MongoDB, Redis</li>
+                    <li>JUnit, Mockito, Postman, TDD</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Security</h3>
+                <ul class="skill-list">
+                    <li>OWASP Top 10</li>
+                    <li>Secure SDLC</li>
+                    <li>API security</li>
+                    <li>Financial security standards</li>
                 </ul>
             </div>
         </div>
         <div class="methodologies">
             <h3>Methodologies</h3>
             <div class="methodologies-grid">
+                <div class="methodology-item"><p>Scrum</p></div>
+                <div class="methodology-item"><p>Agile</p></div>
+                <div class="methodology-item"><p>Kanban</p></div>
                 <div class="methodology-item"><p>Clean Architecture</p></div>
-                <div class="methodology-item"><p>Spec-Driven Development (SDD)</p></div>
                 <div class="methodology-item"><p>Test-Driven Development (TDD)</p></div>
-                <div class="methodology-item"><p>Behavior-Driven Development (BDD)</p></div>
-                <div class="methodology-item"><p>Domain-Driven Design (DDD)</p></div>
             </div>
         </div>
     </div>
@@ -238,22 +252,33 @@
             <p>My professional journey</p>
         </div>
         <div class="experience-container">
-            <div class="experience-card" data-role="scala">
+            <div class="experience-card">
                 <span class="step-badge" aria-hidden="true">01</span>
-                <div class="experience-meta">Lead / Principal Software Engineer • Scala / DataCrédito Experian (2023 – Present)</div>
-                <h3>Core AI Data Ingestion Framework</h3>
-                <p><strong>Core AI Ingestion Framework:</strong> Spearheaded as Principal Software Engineer the architecture and development of an AI-driven Data Ingestion Framework for Scala (the foundational data backbone of Experian), decreasing Data Engineering development and QA lead time by over <strong>50%</strong>.</p>
-                <p><strong>Credit Interface Personalization Chatbot:</strong> Co-designed and engineered an interactive AI chatbot integrated into Experian / DataCrédito platforms to deliver personalized credit interfaces and user experiences.</p>
-                <p><strong>Enterprise AI Integration:</strong> Designed scalable, secure AI pipeline interfaces ensuring robust security standards and compliance within large-scale financial data ingestion processes.</p>
+                <div class="experience-meta">Kidar • Software Engineer (Full-Stack) • May 2023 – Present</div>
+                <h3>Bitácora — Java, Spring Boot, React, AWS</h3>
+                <p><strong>Built from scratch:</strong> Built the Spring Boot backend and the React frontend from scratch; the platform saves <strong>USD 18,000 per year</strong>.</p>
+                <p><strong>Architecture &amp; security:</strong> Designed the architecture, REST APIs and data model with OWASP Top 10 security; tested with JUnit, Mockito and Postman.</p>
+                <p><strong>AWS deployment:</strong> Deployed on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker and hands-off CI/CD, delivered by sprints.</p>
             </div>
-            <div class="experience-card" data-role="kidar">
+            <div class="experience-card">
                 <span class="step-badge" aria-hidden="true">02</span>
-                <div class="experience-meta">Software Engineer • Kidar (April 2023 – Present)</div>
-                <h3>Core SaaS Platforms &amp; Enterprise Architecture</h3>
-                <p><strong>Core SaaS Architecture &amp; Cost Optimization:</strong> Built from the ground up two core internal SaaS platforms (ERP &amp; Time Manager) utilizing Python (FastAPI), MySQL, and AWS, saving <strong>$18,000 USD/year</strong> and cutting project management cycle times by <strong>20%</strong>.</p>
-                <p><strong>Enterprise Data Workflows:</strong> Streamlined company-wide data architecture and internal information pipelines, driving cross-functional synchronization and operational efficiency.</p>
-                <p><strong>Legacy Refactoring &amp; Quality:</strong> Refactored over <strong>20,000 lines</strong> of legacy code to Clean Architecture within 3 weeks, reducing ongoing feature development time by <strong>40%</strong>.</p>
-                <p><strong>Serverless AI Proof of Concept:</strong> Designed and deployed a serverless PoC using AWS Lambda and Bedrock AgentCore, accelerating team technical exploration by <strong>2 weeks</strong>.</p>
+                <div class="experience-meta">Kidar • DataCrédito Experian (financial sector)</div>
+                <h3>Java, Angular, AWS, AI</h3>
+                <p><strong>AI ingestion framework:</strong> Took part, in a Scrum team, in the technical design and development of an AI-assisted data ingestion framework for Scala, Experian's core data platform: ingestions <strong>over 50% faster</strong>.</p>
+                <p><strong>Credit interface chatbot:</strong> Took part in an AI chatbot that personalizes the credit interface, under strict financial-security standards and secure development (OWASP).</p>
+            </div>
+            <div class="experience-card">
+                <span class="step-badge" aria-hidden="true">03</span>
+                <div class="experience-meta">Kidar • Internal tools</div>
+                <h3>Python, FastAPI, MySQL, AWS</h3>
+                <p><strong>ERP &amp; time tracking:</strong> Agile ERP and time-tracking tool with automated tests: <strong>−20%</strong> in the project-management cycle.</p>
+                <p><strong>Legacy refactoring:</strong> Refactored over <strong>20,000 lines</strong> of legacy code to Clean Architecture: <strong>−40%</strong> time per new feature.</p>
+            </div>
+            <div class="experience-card">
+                <span class="step-badge" aria-hidden="true">04</span>
+                <div class="experience-meta">Independent • Freelance Web Developer • Oct – Nov 2025 • Remote</div>
+                <h3>Client website, from requirements to deployment</h3>
+                <p>Built a website for a client, from requirements gathering to deployment, with iterative deliveries and web security (OWASP).</p>
             </div>
         </div>
     </div>
@@ -270,20 +295,33 @@
         </div>
         <div class="projects-container">
 
-            <!-- Adkio -->
+            <div class="project-card" data-project="audit">
+                <div class="project-header project-header-plain">
+                    <span class="project-badge">Jul 2026 – Present · Go, AWS</span>
+                </div>
+                <div class="project-content">
+                    <h3>Accounting Audit Platform (Brazil)</h3>
+                    <p><strong>Founder and backend developer:</strong> Go services and AWS infrastructure for a product in operation, with secure development (OWASP) and agile delivery.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">OWASP</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="project-card" data-project="adkio">
                 <div class="project-header">
                     <img src="./resources/adkio/AdkioPicture.png" alt="Adkio">
                 </div>
                 <div class="project-content">
                     <h3>Adkio</h3>
-                    <p>Automated advertising campaign orchestrator converting <strong>natural language specifications</strong> into multi-channel marketing campaigns (Meta, TikTok, Google Ads) using Anthropic AI agents behind a REST API, with human approval before publishing.</p>
+                    <p><strong>2nd place, GTM Hackathon Bogotá 2026.</strong> Turns a brief into campaigns for Meta, TikTok and Google Ads with AI agents and human approval as a control.</p>
                     <div class="tech-tags">
-                        <span class="tech-tag">Python</span>
                         <span class="tech-tag">FastAPI</span>
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Anthropic</span>
+                        <span class="tech-tag">AI agents</span>
                         <span class="tech-tag">Docker</span>
                     </div>
                     <div class="project-links">
@@ -291,26 +329,41 @@
                             <a href="https://github.com/Andss-ye/Adkio" target="_blank" rel="noopener noreferrer">GitHub</a>
                             <a href="https://adkio.pages.dev/" target="_blank" rel="noopener noreferrer">Demo</a>
                         </div>
-                        <a href="https://adkio.pages.dev/" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View Adkio demo">
+                        <a href="https://adkio.pages.dev/" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View Adkio">
                             <svg><use href="#icon-arrow-ne"/></svg>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- ERP Kidar -->
+            <div class="project-card" data-project="sentinel">
+                <div class="project-header project-header-plain">
+                    <span class="project-badge">Dec 2025 · Fintech, microservices</span>
+                </div>
+                <div class="project-content">
+                    <h3>Sentinel</h3>
+                    <p><strong>Yuno Hackathon (48 h, selected).</strong> Seven microservices on Docker Compose and PostgreSQL, with a dashboard that detects payment anomalies in real time.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Docker Compose</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">Fintech</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="project-card" data-project="erp">
                 <div class="project-header">
                     <img src="./resources/ERP/KidarERPPicture.png" alt="Kidar ERP">
                 </div>
                 <div class="project-content">
                     <h3>ERP Kidar</h3>
-                    <p><strong>Enterprise system</strong> built with clean architecture, AWS integration, and agentic flows for process automation.</p>
+                    <p><strong>Internal ERP and time-tracking tool</strong> built with Clean Architecture and automated tests: −20% in the project-management cycle.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">MySQL</span>
                         <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Bedrock</span>
                     </div>
                     <div class="project-links">
                         <div class="project-links-text">
@@ -320,7 +373,6 @@
                 </div>
             </div>
 
-            <!-- Jojun -->
             <div class="project-card" data-project="jojun">
                 <div class="project-header">
                     <img src="./resources/jojun/JojunPicture.png" alt="Jojun">
@@ -338,14 +390,13 @@
                         <div class="project-links-text">
                             <a href="https://github.com/Organization-Jojun/joju-cli" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
-                        <a href="https://github.com/Organization-Jojun/joju-cli" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View Jojun on GitHub">
+                        <a href="https://github.com/Organization-Jojun/joju-cli" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View Jojun">
                             <svg><use href="#icon-arrow-ne"/></svg>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Argenta -->
             <div class="project-card" data-project="argenta">
                 <div class="project-header">
                     <img src="./resources/argenta/ArgentaPicture.png" alt="Argenta Health Care">
@@ -364,7 +415,7 @@
                             <a href="https://github.com/Julianlamaravilla/ArgentaWebsite" target="_blank" rel="noopener noreferrer">GitHub</a>
                             <a href="https://argenta.julianrestrepo012.workers.dev/" target="_blank" rel="noopener noreferrer">Demo</a>
                         </div>
-                        <a href="https://argenta.julianrestrepo012.workers.dev/" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View Argenta demo">
+                        <a href="https://argenta.julianrestrepo012.workers.dev/" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="View Argenta Health Care">
                             <svg><use href="#icon-arrow-ne"/></svg>
                         </a>
                     </div>
@@ -393,8 +444,7 @@
                     <h3>Education</h3>
                 </div>
                 <ul class="skill-list">
-                    <li><strong>B.S. in Systems Engineering</strong><br>Universidad EAN — 6th Semester, In Progress<br>Bogotá, Colombia</li>
-                    <li><strong>Technical Degree in Software Programming</strong><br>Completed</li>
+                    <li><strong>B.S. in Systems Engineering</strong><br>Universidad EAN — Expected graduation: June 2027<br>Bogotá, Colombia</li><li><strong>Technical Degree in Software Programming</strong><br>Completed</li>
                 </ul>
             </div>
             <div class="skill-category">
@@ -405,9 +455,7 @@
                     <h3>Certifications</h3>
                 </div>
                 <ul class="skill-list">
-                    <li>AWS Knowledge: AI-DLC Foundations — Amazon Web Services</li>
-                    <li>Full-Stack Engineering with JavaScript — CodeSignal</li>
-                    <li>AWS Cloud Foundations — Amazon Web Services</li>
+                    <li>AWS Cloud Foundations — Amazon Web Services</li><li>AI-DLC Foundations — Amazon Web Services</li><li>Full-Stack JavaScript — CodeSignal</li>
                 </ul>
             </div>
             <div class="skill-category">
@@ -418,8 +466,7 @@
                     <h3>Languages</h3>
                 </div>
                 <ul class="skill-list">
-                    <li>English — Professional / Advanced (C1/B2)</li>
-                    <li>Spanish — Native Speaker</li>
+                    <li>English — Advanced</li><li>Spanish — Native</li>
                 </ul>
             </div>
         </div>
@@ -434,7 +481,7 @@
         <div class="contact-banner">
             <div class="contact-banner-left">
                 <h2>Let's Talk</h2>
-                <p class="contact-subtitle">I am available for opportunities, technical consultations and collaborations in AI, backend and cloud architecture.</p>
+                <p class="contact-subtitle">I am available for opportunities, technical consultations and collaborations in full-stack, AI, backend and cloud architecture.</p>
                 <div class="contact-cta">
                     <a href="mailto:julianrestrepo012@gmail.com" class="btn btn-primary">Send Email</a>
                     <a href="https://www.linkedin.com/in/jarestrepo/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Connect on LinkedIn</a>

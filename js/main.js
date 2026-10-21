@@ -24,7 +24,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 // Close mobile menu when a link is clicked
-const navItems = navLinks.querySelectorAll('a');
+const navItems = navLinks.querySelectorAll('a:not(.nav-cv-btn)');
 navItems.forEach(item => {
     item.addEventListener('click', () => {
         menuToggle.classList.remove('active');
@@ -81,16 +81,4 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// CV download with language detection
-const downloadCvBtn = document.getElementById('btnDownloadCv');
-if (downloadCvBtn) {
-    downloadCvBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const currentLang = getLanguage();
-        const cvFile = currentLang === 'es' ? 'Julian_Restrepo_CV_ES.pdf' : 'Julian_Restrepo_CV_EN.pdf';
-        const cvLink = document.createElement('a');
-        cvLink.href = `./files/${cvFile}`;
-        cvLink.download = cvFile;
-        cvLink.click();
-    });
-}
+// CV download: href/download attributes are kept in sync with the language in updatePageLanguage()
