@@ -9,66 +9,66 @@ const translations = {
             "Contact"
         ],
         "lang_btn": "ES",
-        "hero_badge": "Full-Stack Developer | Software Architecture & AI",
-        "hero_title": "I Build Complete Systems, from Data Model to Deployment",
-        "hero_desc": "Full-Stack Developer with strong command of software architecture and AI. 3+ years on enterprise financial-sector projects (DataCrédito Experian), shipping APIs, interfaces and AWS deployments with security by design (OWASP).",
+        "hero_badge": "Java Software Engineer | Spring Boot · Microservices · AWS",
+        "hero_title": "I Build Java Backends That Run in Production",
+        "hero_desc": "Software Engineer specialized in Java and Spring Boot. I build REST APIs and microservices deployed on AWS for enterprise projects in the financial sector.",
         "cta_projects": "View Projects",
         "cta_contact": "Contact",
         "cta_download": "Download CV",
         "avail": "Open to opportunities",
         "about_title": "About me",
-        "about_sub": "Architecture, AI and end-to-end delivery",
+        "about_sub": "Java backends, microservices and cloud delivery",
         "about": [
-            "Full-Stack Developer with broad command of <strong>software architecture and artificial intelligence</strong>, with more than three years of experience on enterprise projects in the financial sector (DataCrédito Experian).",
-            "At <strong>Kidar</strong> I built <strong>Bitácora</strong> from scratch (Spring Boot + React on AWS). It is now in production and saves <strong>USD 18,000 per year</strong>.",
-            "At <strong>DataCrédito Experian</strong> I took part in the design and development of an AI-assisted data ingestion framework for Scala, with ingestions <strong>over 50% faster</strong>, and in an AI chatbot that personalizes the credit interface.",
-            "I design and deliver complete systems, from the data model and APIs to the interface and deployment on AWS, with security as a requirement from design (<strong>OWASP</strong>) and agile methodologies (<strong>Scrum</strong>).",
-            "In parallel, I lead the <strong>Go backend</strong> of an accounting audit platform in Brazil."
+            "Software Engineer specialized in <strong>Java and Spring Boot</strong>, building REST APIs and microservices deployed on AWS for enterprise projects in the financial sector (DataCrédito Experian).",
+            "At <strong>Kidar</strong>, I built the <strong>Bitácora</strong> backend (Spring Boot) and frontend (React) from scratch. It is now in production and saves <strong>USD 18,000 per year</strong>.",
+            "For <strong>DataCrédito Experian</strong>, I developed a credit chatbot integrated with <strong>5 microservices</strong> and took part in an AI-assisted ingestion framework in Scala that made ingestions over <strong>50% faster</strong>.",
+            "I work with <strong>Scrum, automated testing (JUnit, Mockito), CI/CD and Clean Architecture</strong>, deploying on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker.",
+            "Beyond Java, I also build with Scala, Python (FastAPI), Node.js, Go, Angular and React, owning features from the API to the deployment."
         ],
         "skills_title": "Skills & Tech Stack",
         "skills_sub": "Tools and technologies I master",
         "skill_heads": [
-            "Architecture & Backend",
+            "Java & Backend",
+            "Other Languages",
             "Frontend",
-            "AI",
             "Cloud & DevOps",
-            "Data & Testing",
-            "Security"
+            "Testing",
+            "Databases"
         ],
         "methods_head": "Methodologies",
         "exp_title": "Experience",
         "exp_sub": "My professional journey",
         "exp": [
             {
-                "meta": "Kidar • Software Engineer (Full-Stack) • May 2023 – Present",
+                "meta": "Kidar • Java Software Engineer • May 2026 – Present",
                 "job": "Bitácora — Java, Spring Boot, React, AWS",
                 "b": [
-                    "<strong>Built from scratch:</strong> Built the Spring Boot backend and the React frontend from scratch; the platform saves <strong>USD 18,000 per year</strong>.",
-                    "<strong>Architecture & security:</strong> Designed the architecture, REST APIs and data model with OWASP Top 10 security; tested with JUnit, Mockito and Postman.",
-                    "<strong>AWS deployment:</strong> Deployed on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker and hands-off CI/CD, delivered by sprints."
+                    "<strong>Built from scratch:</strong> Built the Spring Boot backend and the React frontend from scratch; the platform is in production and saves <strong>USD 18,000 per year</strong>.",
+                    "<strong>APIs & data model:</strong> Designed the REST APIs and the data model, with unit tests in JUnit and Mockito.",
+                    "<strong>AWS deployment:</strong> Deployed on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker and automated CI/CD."
                 ]
             },
             {
                 "meta": "Kidar • DataCrédito Experian (financial sector)",
-                "job": "Java, Angular, AWS, AI",
+                "job": "Java, Angular, Scala, AWS, Microservices",
                 "b": [
-                    "<strong>AI ingestion framework:</strong> Took part, in a Scrum team, in the technical design and development of an AI-assisted data ingestion framework for Scala, Experian's core data platform: ingestions <strong>over 50% faster</strong>.",
-                    "<strong>Credit interface chatbot:</strong> Took part in an AI chatbot that personalizes the credit interface, under strict financial-security standards and secure development (OWASP)."
+                    "<strong>Credit chatbot:</strong> Developed a chatbot that personalizes the credit interface, integrated with <strong>5 impacted microservices</strong>, under strict financial security standards.",
+                    "<strong>AI ingestion framework:</strong> Took part in the design and development of an AI-assisted data ingestion framework in Scala: ingestions <strong>over 50% faster</strong>."
                 ]
             },
             {
                 "meta": "Kidar • Internal tools",
                 "job": "Python, FastAPI, MySQL, AWS",
                 "b": [
-                    "<strong>ERP & time tracking:</strong> Agile ERP and time-tracking tool with automated tests: <strong>−20%</strong> in the project-management cycle.",
+                    "<strong>ERP & time tracking:</strong> ERP and time tracking with automated tests: <strong>−20%</strong> in the project management cycle.",
                     "<strong>Legacy refactoring:</strong> Refactored over <strong>20,000 lines</strong> of legacy code to Clean Architecture: <strong>−40%</strong> time per new feature."
                 ]
             },
             {
-                "meta": "Independent • Freelance Web Developer • Oct – Nov 2025 • Remote",
-                "job": "Client website, from requirements to deployment",
+                "meta": "Independent • Freelance Developer • Oct 2025 – Apr 2026 • Remote",
+                "job": "JavaScript, TypeScript, Node.js, Cloudflare",
                 "b": [
-                    "Built a website for a client, from requirements gathering to deployment, with iterative deliveries and web security (OWASP)."
+                    "Developed websites, web applications and Node.js APIs for clients, from requirements to deployment on Cloudflare."
                 ]
             }
         ],
@@ -109,10 +109,10 @@ const translations = {
         "cert_h": "Certifications",
         "lang_h": "Languages",
         "edu_list": "<li><strong>B.S. in Systems Engineering</strong><br>Universidad EAN — Expected graduation: June 2027<br>Bogotá, Colombia</li><li><strong>Technical Degree in Software Programming</strong><br>Completed</li>",
-        "cert_list": "<li>AWS Cloud Foundations — Amazon Web Services</li><li>AI-DLC Foundations — Amazon Web Services</li><li>Full-Stack JavaScript — CodeSignal</li>",
+        "cert_list": "<li>AWS Cloud Foundations — Amazon Web Services</li><li>AI-DLC Foundations — Amazon Web Services</li><li>Full-Stack Engineering with JavaScript — CodeSignal</li>",
         "lang_list": "<li>English — Advanced</li><li>Spanish — Native</li>",
         "contact_title": "Let's Talk",
-        "contact_sub": "I am available for opportunities, technical consultations and collaborations in full-stack, AI, backend and cloud architecture.",
+        "contact_sub": "I am available for opportunities, technical consultations and collaborations in Java backend, microservices and cloud architecture.",
         "contact_email": "Send Email",
         "contact_li": "Connect on LinkedIn",
         "footer": "© 2026 Julián Andrés Restrepo Castaño. Built with attention to detail."
@@ -127,66 +127,66 @@ const translations = {
             "Contacto"
         ],
         "lang_btn": "EN",
-        "hero_badge": "Desarrollador Full-Stack | Arquitectura de Software e IA",
-        "hero_title": "Construyo Sistemas Completos, del Modelo de Datos al Despliegue",
-        "hero_desc": "Desarrollador Full-Stack con amplio dominio de arquitectura de software e inteligencia artificial. Más de 3 años en proyectos empresariales del sector financiero (DataCrédito Experian): APIs, interfaces y despliegues en AWS con seguridad desde el diseño (OWASP).",
+        "hero_badge": "Java Software Engineer | Spring Boot · Microservicios · AWS",
+        "hero_title": "Construyo Backends en Java que Corren en Producción",
+        "hero_desc": "Software Engineer especializado en Java y Spring Boot. Construyo APIs REST y microservicios desplegados en AWS para proyectos empresariales del sector financiero.",
         "cta_projects": "Ver Proyectos",
         "cta_contact": "Contacto",
         "cta_download": "Descargar CV",
         "avail": "Disponible para oportunidades",
         "about_title": "Sobre mí",
-        "about_sub": "Arquitectura, IA y entrega de extremo a extremo",
+        "about_sub": "Backends en Java, microservicios y despliegue en la nube",
         "about": [
-            "Desarrollador Full-Stack con amplio dominio de <strong>arquitectura de software e inteligencia artificial</strong>, con más de tres años de experiencia en proyectos empresariales del sector financiero (DataCrédito Experian).",
-            "En <strong>Kidar</strong> construí <strong>Bitácora</strong> desde cero (Spring Boot + React en AWS). Hoy está en producción y ahorra <strong>USD 18.000 al año</strong>.",
-            "En <strong>DataCrédito Experian</strong> participé en el diseño y desarrollo de un framework de ingesta de datos asistido por IA para Scala, con ingestas <strong>más de 50 % más rápidas</strong>, y en un chatbot con IA que personaliza la interfaz de crédito.",
-            "Diseño y entrego sistemas completos, desde el modelo de datos y las APIs hasta la interfaz y el despliegue en AWS, con la seguridad como requisito desde el diseño (<strong>OWASP</strong>) y metodologías ágiles (<strong>Scrum</strong>).",
-            "En paralelo, lidero el <strong>backend en Go</strong> de una plataforma de auditoría contable en Brasil."
+            "Software Engineer especializado en <strong>Java y Spring Boot</strong>, construyendo APIs REST y microservicios desplegados en AWS para proyectos empresariales del sector financiero (DataCrédito Experian).",
+            "En <strong>Kidar</strong> construí desde cero el backend (Spring Boot) y el frontend (React) de <strong>Bitácora</strong>. Hoy está en producción y ahorra <strong>USD 18.000 al año</strong>.",
+            "Para <strong>DataCrédito Experian</strong> desarrollé un chatbot de crédito integrado con <strong>5 microservicios</strong> y participé en un framework de ingesta asistido por IA en Scala con ingestas <strong>más de 50 % más rápidas</strong>.",
+            "Trabajo con <strong>Scrum, pruebas automatizadas (JUnit, Mockito), CI/CD y Clean Architecture</strong>, desplegando en AWS (ECS, API Gateway, Aurora, S3, Lambda) con Docker.",
+            "Además de Java, construyo con Scala, Python (FastAPI), Node.js, Go, Angular y React, llevando funcionalidades desde la API hasta el despliegue."
         ],
         "skills_title": "Skills & Stack Tecnológico",
         "skills_sub": "Herramientas y tecnologías que domino",
         "skill_heads": [
-            "Arquitectura y Backend",
+            "Java y Backend",
+            "Otros Lenguajes",
             "Frontend",
-            "IA",
             "Nube y DevOps",
-            "Datos y Pruebas",
-            "Seguridad"
+            "Pruebas",
+            "Bases de Datos"
         ],
         "methods_head": "Metodologías",
         "exp_title": "Experiencia",
         "exp_sub": "Mi trayectoria profesional",
         "exp": [
             {
-                "meta": "Kidar • Software Engineer (Full-Stack) • May 2023 – Actualidad",
+                "meta": "Kidar • Java Software Engineer • May 2026 – Actualidad",
                 "job": "Bitácora — Java, Spring Boot, React, AWS",
                 "b": [
-                    "<strong>Construida desde cero:</strong> Construí desde cero el backend (Spring Boot) y el frontend (React); la plataforma ahorra <strong>USD 18.000 al año</strong>.",
-                    "<strong>Arquitectura y seguridad:</strong> Diseñé la arquitectura, las APIs REST y el modelo de datos con seguridad OWASP Top 10; pruebas con JUnit, Mockito y Postman.",
-                    "<strong>Despliegue en AWS:</strong> Desplegué en AWS (ECS, API Gateway, Aurora, S3, Lambda) con Docker y CI/CD sin pasos manuales, por sprints."
+                    "<strong>Construida desde cero:</strong> Construí desde cero el backend en Spring Boot y el frontend en React; la plataforma está en producción y ahorra <strong>USD 18.000 al año</strong>.",
+                    "<strong>APIs y modelo de datos:</strong> Diseñé las APIs REST y el modelo de datos, con pruebas unitarias en JUnit y Mockito.",
+                    "<strong>Despliegue en AWS:</strong> Desplegué en AWS (ECS, API Gateway, Aurora, S3, Lambda) con Docker y CI/CD automatizado."
                 ]
             },
             {
                 "meta": "Kidar • DataCrédito Experian (sector financiero)",
-                "job": "Java, Angular, AWS, IA",
+                "job": "Java, Angular, Scala, AWS, Microservicios",
                 "b": [
-                    "<strong>Framework de ingesta con IA:</strong> Participé, en un equipo Scrum, en el diseño técnico y desarrollo de un framework de ingesta de datos asistido por IA para Scala, la plataforma central de datos de Experian: ingestas <strong>más de 50 % más rápidas</strong>.",
-                    "<strong>Chatbot de interfaz crediticia:</strong> Participé en un chatbot con IA que personaliza la interfaz de crédito, bajo estrictas normas de seguridad financiera y desarrollo seguro (OWASP)."
+                    "<strong>Chatbot de crédito:</strong> Desarrollé un chatbot que personaliza la interfaz de crédito, integrado con <strong>5 microservicios</strong> impactados, bajo estrictas normas de seguridad financiera.",
+                    "<strong>Framework de ingesta con IA:</strong> Participé en el diseño y desarrollo de un framework de ingesta de datos asistido por IA en Scala: ingestas <strong>más de 50 % más rápidas</strong>."
                 ]
             },
             {
                 "meta": "Kidar • Herramientas internas",
                 "job": "Python, FastAPI, MySQL, AWS",
                 "b": [
-                    "<strong>ERP y control de tiempos:</strong> ERP y herramienta de control de tiempos, ágil y con pruebas automatizadas: <strong>−20 %</strong> en el ciclo de gestión de proyectos.",
+                    "<strong>ERP y control de tiempos:</strong> ERP y control de tiempos con pruebas automatizadas: <strong>−20 %</strong> en el ciclo de gestión de proyectos.",
                     "<strong>Refactorización legacy:</strong> Refactoricé más de <strong>20.000 líneas</strong> de código legado a Clean Architecture: <strong>−40 %</strong> de tiempo por nueva funcionalidad."
                 ]
             },
             {
-                "meta": "Independiente • Desarrollador Web Freelance • Oct – Nov 2025 • Remoto",
-                "job": "Sitio web para un cliente, del requisito al despliegue",
+                "meta": "Independiente • Desarrollador Freelance • Oct 2025 – Abr 2026 • Remoto",
+                "job": "JavaScript, TypeScript, Node.js, Cloudflare",
                 "b": [
-                    "Sitio web para un cliente, desde el levantamiento de requisitos hasta el despliegue, con entregas iterativas y seguridad web (OWASP)."
+                    "Desarrollé sitios, aplicaciones web y APIs en Node.js para clientes, desde requisitos hasta despliegue en Cloudflare."
                 ]
             }
         ],
@@ -227,10 +227,10 @@ const translations = {
         "cert_h": "Certificaciones",
         "lang_h": "Idiomas",
         "edu_list": "<li><strong>Ingeniería de Sistemas</strong><br>Universidad EAN — Grado esperado: junio 2027<br>Bogotá, Colombia</li><li><strong>Técnico en Programación de Software</strong><br>Finalizado</li>",
-        "cert_list": "<li>AWS Cloud Foundations — Amazon Web Services</li><li>AI-DLC Foundations — Amazon Web Services</li><li>Full-Stack JavaScript — CodeSignal</li>",
+        "cert_list": "<li>AWS Cloud Foundations — Amazon Web Services</li><li>AI-DLC Foundations — Amazon Web Services</li><li>Full-Stack Engineering with JavaScript — CodeSignal</li>",
         "lang_list": "<li>Español — Nativo</li><li>Inglés — Avanzado</li>",
         "contact_title": "¿Hablamos?",
-        "contact_sub": "Estoy disponible para oportunidades, consultas técnicas y colaboraciones en full-stack, IA, backend y arquitectura cloud.",
+        "contact_sub": "Estoy disponible para oportunidades, consultas técnicas y colaboraciones en backend Java, microservicios y arquitectura cloud.",
         "contact_email": "Enviar Email",
         "contact_li": "Conectar en LinkedIn",
         "footer": "© 2026 Julián Andrés Restrepo Castaño. Construido con atención al detalle."

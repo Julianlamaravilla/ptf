@@ -2,451 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julián Restrepo - CV (EN)</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        @page {
-            size: A4;
-            margin: 20mm;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            color: #000;
-            line-height: 1.5;
-            font-size: 10pt;
-            background: #fff;
-        }
-
-        .container {
-            max-width: 210mm;
-            margin: 0 auto;
-        }
-
-        /* Header */
-        .header {
-            border-bottom: 3px solid #D97706;
-            padding-bottom: 12pt;
-            margin-bottom: 16pt;
-            break-after: avoid;
-        }
-
-        .header h1 {
-            font-size: 18pt;
-            font-weight: 800;
-            color: #000;
-            margin-bottom: 4pt;
-        }
-
-        .header .title {
-            font-size: 11pt;
-            color: #6B7280;
-            font-weight: 600;
-            margin-bottom: 8pt;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16pt;
-            font-size: 9pt;
-            color: #6B7280;
-        }
-
-        .contact-info a {
-            color: #D97706;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Sections */
-        section {
-            margin-bottom: 16pt;
-            break-inside: avoid;
-        }
-
-        section h2 {
-            font-size: 12pt;
-            font-weight: 800;
-            color: #000;
-            border-bottom: 2px solid #D97706;
-            padding-bottom: 4pt;
-            margin-bottom: 8pt;
-        }
-
-        /* Subsections */
-        .subsection {
-            margin-bottom: 12pt;
-            break-inside: avoid;
-        }
-
-        .subsection h3 {
-            font-size: 11pt;
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 3pt;
-        }
-
-        .subsection .meta {
-            font-size: 9pt;
-            color: #6B7280;
-            font-weight: 600;
-            margin-bottom: 3pt;
-        }
-
-        .subsection p {
-            font-size: 10pt;
-            color: #1F2937;
-            margin-bottom: 4pt;
-            line-height: 1.4;
-        }
-
-        .subsection ul {
-            margin-left: 16pt;
-            margin-bottom: 4pt;
-        }
-
-        .subsection li {
-            font-size: 10pt;
-            color: #1F2937;
-            margin-bottom: 2pt;
-        }
-
-        /* Skills Grid */
-        .skills-category {
-            margin-bottom: 8pt;
-            break-inside: avoid;
-        }
-
-        .skills-category h4 {
-            font-size: 10pt;
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 3pt;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8pt;
-            margin-bottom: 4pt;
-        }
-
-        .skill-tag {
-            background: #F3F4F6;
-            border: 1px solid #D97706;
-            color: #1F2937;
-            padding: 2pt 6pt;
-            border-radius: 2pt;
-            font-size: 9pt;
-            font-weight: 500;
-            white-space: nowrap;
-        }
-
-        /* Projects */
-        .project {
-            margin-bottom: 8pt;
-            break-inside: avoid;
-            border-left: 3px solid #D97706;
-            padding-left: 12pt;
-        }
-
-        .project h4 {
-            font-size: 10pt;
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 2pt;
-        }
-
-        .project a {
-            color: #D97706;
-            text-decoration: none;
-            font-size: 9pt;
-        }
-
-        .project p {
-            font-size: 9pt;
-            color: #1F2937;
-            margin-bottom: 2pt;
-        }
-
-        /* Lists */
-        .highlights {
-            list-style: none;
-            margin-left: 0;
-        }
-
-        .highlights li {
-            font-size: 10pt;
-            color: #1F2937;
-            margin-bottom: 3pt;
-            padding-left: 12pt;
-            text-indent: -8pt;
-        }
-
-        .highlights li:before {
-            content: "✓ ";
-            color: #D97706;
-            font-weight: bold;
-            margin-right: 4pt;
-        }
-
-        /* Print optimization */
-        @media print {
-            body {
-                margin: 0;
-                padding: 0;
-            }
-        }
+        @page { size: Letter; margin: 0.45in 0.7in; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Times New Roman', Times, serif; font-size: 10pt; line-height: 1.28; color: #1a1a1a; }
+        a { color: #2f5bb7; text-decoration: none; }
+        header { text-align: center; margin-bottom: 10pt; }
+        h1 { font-size: 22pt; color: #1f3864; line-height: 1.1; }
+        .headline { color: #2f5bb7; font-weight: bold; font-size: 11.5pt; margin: 2pt 0; }
+        .contact { font-size: 9.5pt; }
+        h2 { font-size: 11pt; color: #1f3864; text-transform: uppercase; border-bottom: 1.2pt solid #1f3864; padding-bottom: 1pt; margin: 8pt 0 4pt; }
+        .row { display: flex; justify-content: space-between; gap: 12pt; }
+        .row .right { font-style: italic; white-space: nowrap; }
+        h3 { font-size: 10.5pt; color: #2f5bb7; margin-top: 4pt; }
+        ul { margin-left: 13pt; }
+        li { margin: 1pt 0; }
+        p { margin: 1pt 0; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>JULIÁN ANDRÉS RESTREPO CASTAÑO</h1>
-            <div class="title">Software Engineer | Full-Stack, Cloud & AI Agentic Systems</div>
-            <div class="contact-info">
-                <div>📧 <a href="mailto:julianrestrepo012@gmail.com">julianrestrepo012@gmail.com</a></div>
-                <div>📱 +57 333 750 8344</div>
-                <div>📍 Bogotá, Colombia</div>
-                <div>🔗 <a href="https://www.linkedin.com/in/jarestrepo/">LinkedIn</a></div>
-                <div>💻 <a href="https://github.com/Julianlamaravilla">GitHub</a></div>
-            </div>
-        </div>
+    <header>
+        <h1>Julián Andrés Restrepo Castaño</h1>
+        <div class="headline">Java Software Engineer · Spring Boot · Microservices · REST APIs · AWS</div>
+        <div class="contact">Bogotá, Colombia (Hybrid) · +57 333 750 8344 · <a href="mailto:julianrestrepo012@gmail.com">julianrestrepo012@gmail.com</a> · <a href="https://www.linkedin.com/in/jarestrepo/">linkedin.com/in/jarestrepo</a></div>
+        <div class="contact"><a href="https://github.com/Julianlamaravilla">github.com/Julianlamaravilla</a> · Portfolio: <a href="https://ptf-theta.vercel.app">ptf-theta.vercel.app</a></div>
+    </header>
 
-        <!-- Professional Summary -->
-        <section>
-            <h2>PROFESSIONAL SUMMARY</h2>
-            <p>Results-driven Software Engineer with hands-on expertise building <strong>scalable cloud architectures, full-stack web applications, enterprise SaaS solutions, and Agentic AI systems</strong>. Proven track record at Kidar architecting core SaaS platforms (ERP and Time Management) that reduced operational friction, saved <strong>$18,000 USD annually</strong>, and accelerated project management workflows by <strong>20%</strong>. Lead Software Engineer at Scala / DataCrédito Experian designing a core AI Data Ingestion Framework that reduced overall development and QA cycles by over <strong>50%</strong>.</p>
-            <p><strong>Deep expertise in:</strong> Python (FastAPI), Java (Spring Boot), React, AWS Cloud infrastructure, and modern AI Development Lifecycles (AI-DLC).</p>
-        </section>
+    <h2>Professional Summary</h2>
+    <p>Software Engineer specialized in <strong>Java and Spring Boot</strong>, with experience building REST APIs and microservices deployed on AWS for enterprise projects in the financial sector (DataCrédito Experian). Built the Bitácora backend from scratch, now in production. I work with Scrum, automated testing (JUnit, Mockito), CI/CD and Clean Architecture.</p>
 
-        <!-- Technical Skills -->
-        <section>
-            <h2>TECHNICAL SKILLS</h2>
+    <h2>Professional Experience</h2>
+    <div class="row"><div><strong>Kidar</strong> · <em>Java Software Engineer</em></div><div class="right">May 2026 – Present · Bogotá</div></div>
+    <h3>Bitácora — Java, Spring Boot, React, AWS</h3>
+    <ul>
+        <li>Built the Spring Boot backend and the React frontend from scratch; the platform saves <strong>USD 18,000 per year</strong>.</li>
+        <li>Designed the REST APIs and the data model, with unit tests in JUnit and Mockito.</li>
+        <li>Deployed on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker and automated CI/CD.</li>
+    </ul>
+    <h3>DataCrédito Experian · Credit Chatbot — Java, Angular, Microservices</h3>
+    <ul>
+        <li>Developed a chatbot that personalizes the credit interface, integrated with <strong>5 impacted microservices</strong>, under strict financial security standards.</li>
+    </ul>
+    <h3>DataCrédito Experian · AI Ingestion Framework — Scala, AWS</h3>
+    <ul>
+        <li>Took part in the design and development of an AI-assisted data ingestion framework in Scala: ingestions <strong>over 50% faster</strong>.</li>
+    </ul>
+    <h3>Internal Tools — Python, FastAPI, MySQL, AWS</h3>
+    <ul>
+        <li>ERP and time tracking with automated tests: <strong>−20%</strong> in the project management cycle.</li>
+        <li>Refactored over 20,000 lines of legacy code to Clean Architecture: <strong>−40%</strong> time per new feature.</li>
+    </ul>
+    <div class="row" style="margin-top:5pt"><div><strong>Independent</strong> · <em>Freelance Developer</em></div><div class="right">Oct 2025 – Apr 2026 · Remote</div></div>
+    <h3>JavaScript, TypeScript, Node.js, Cloudflare</h3>
+    <ul>
+        <li>Developed websites, web applications and Node.js APIs for clients, from requirements to deployment on Cloudflare.</li>
+    </ul>
 
-            <div class="skills-category">
-                <h4>Primary Languages & Frameworks</h4>
-                <div class="skills-list">
-                    <span class="skill-tag">Python (FastAPI)</span>
-                    <span class="skill-tag">Java (Spring Boot)</span>
-                    <span class="skill-tag">React.js</span>
-                    <span class="skill-tag">MySQL</span>
-                </div>
-            </div>
+    <h2>Projects</h2>
+    <div class="row"><div><strong>Sentinel — Yuno Hackathon (48 h, selected)</strong> · <em>Microservices, Fintech</em></div><div class="right">Dec 2025</div></div>
+    <ul><li>Real-time payment anomaly detection: 7 microservices on Docker Compose, PostgreSQL and a dashboard.</li></ul>
+    <div class="row"><div><strong>Adkio — 2nd place, GTM Hackathon Bogotá 2026</strong> · <em>FastAPI, React</em></div><div class="right">May 2026</div></div>
+    <ul><li>Turns a brief into Meta, TikTok and Google Ads campaigns with AI agents · <a href="https://adkio.pages.dev">adkio.pages.dev</a></li></ul>
 
-            <div class="skills-category">
-                <h4>Secondary Languages & Tools</h4>
-                <div class="skills-list">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Tailwind CSS</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                </div>
-            </div>
+    <h2>Education</h2>
+    <div class="row"><div><strong>Universidad EAN</strong> · <em>B.S. in Systems Engineering</em></div><div class="right">Expected graduation: Jun 2027</div></div>
+    <div class="row"><div><strong>Technical Degree in Software Programming</strong></div><div class="right">Completed</div></div>
 
-            <div class="skills-category">
-                <h4>Cloud & DevOps (AWS)</h4>
-                <div class="skills-list">
-                    <span class="skill-tag">S3</span>
-                    <span class="skill-tag">EKS</span>
-                    <span class="skill-tag">ECS</span>
-                    <span class="skill-tag">Aurora DB</span>
-                    <span class="skill-tag">Bedrock</span>
-                    <span class="skill-tag">Lambda</span>
-                    <span class="skill-tag">EC2</span>
-                    <span class="skill-tag">API Gateway</span>
-                    <span class="skill-tag">VPC</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">CI/CD</span>
-                </div>
-            </div>
+    <h2>Technical Skills</h2>
+    <p><strong>Java &amp; backend:</strong> Java, Spring Boot, REST APIs, microservices, Clean Architecture</p>
+    <p><strong>Other languages:</strong> Scala, Python (FastAPI), Node.js, Go</p>
+    <p><strong>Frontend:</strong> Angular, React, TypeScript, JavaScript</p>
+    <p><strong>DevOps &amp; cloud:</strong> AWS (ECS, API Gateway, Aurora, S3, Lambda), Docker, CI/CD, Git, Azure DevOps</p>
+    <p><strong>Testing:</strong> JUnit, Mockito, Postman, TDD · Scrum</p>
+    <p><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Redis</p>
 
-            <div class="skills-category">
-                <h4>AI & Agentic Systems</h4>
-                <div class="skills-list">
-                    <span class="skill-tag">Agentic System Design</span>
-                    <span class="skill-tag">RAGs</span>
-                    <span class="skill-tag">Vector Databases</span>
-                    <span class="skill-tag">Anthropic Models</span>
-                    <span class="skill-tag">LiteLLM</span>
-                    <span class="skill-tag">AI-DLC</span>
-                    <span class="skill-tag">ML & DL Fundamentals</span>
-                </div>
-            </div>
-
-            <div class="skills-category">
-                <h4>Software Architecture & Methodologies</h4>
-                <div class="skills-list">
-                    <span class="skill-tag">Clean Architecture</span>
-                    <span class="skill-tag">Spec-Driven Development</span>
-                    <span class="skill-tag">Test-Driven Development</span>
-                    <span class="skill-tag">Behavior-Driven Development</span>
-                    <span class="skill-tag">Domain-Driven Design</span>
-                    <span class="skill-tag">Git</span>
-                </div>
-            </div>
-
-            <div class="skills-category">
-                <h4>Domain & Theoretical Knowledge</h4>
-                <div class="skills-list">
-                    <span class="skill-tag">Information Security Systems</span>
-                    <span class="skill-tag">Big Data Engineering</span>
-                    <span class="skill-tag">Project Management</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Soft Skills -->
-        <section>
-            <h2>SOFT SKILLS</h2>
-            <ul class="highlights">
-                <li><strong>Problem Solving</strong> — Legacy code refactoring, complex architectural integration</li>
-                <li><strong>Adaptability</strong> — Fast onboarding into new teams and adoption of emerging technologies</li>
-                <li><strong>Collaboration</strong> — Experience working with senior developers, product owners, and executive leadership</li>
-                <li><strong>Technical Communication</strong> — Clear documentation of architectural decisions and technical progress</li>
-                <li><strong>Innovative Thinking</strong> — Design and implementation of serverless and agentic solutions</li>
-            </ul>
-        </section>
-
-        <!-- Work Experience -->
-        <section>
-            <h2>WORK EXPERIENCE</h2>
-
-            <div class="subsection">
-                <h3>Lead / Principal Software Engineer (AI Frameworks)</h3>
-                <div class="meta">Scala / DataCrédito Experian | 2023 – Present | Bogotá, Colombia</div>
-
-                <div class="project">
-                    <h4>Core AI Data Ingestion Framework</h4>
-                    <p><strong>Achievement:</strong> Spearheaded as Principal Software Engineer the architecture and development of an AI-driven Data Ingestion Framework for Scala (the foundational data backbone of Experian).</p>
-                    <p><strong>Impact:</strong> Decreased Data Engineering development and QA lead time by over <strong>50%</strong>.</p>
-                </div>
-
-                <div class="project">
-                    <h4>Credit Interface Personalization Chatbot</h4>
-                    <p><strong>Achievement:</strong> Co-designed and engineered an interactive AI chatbot integrated into Experian / DataCrédito platforms to deliver personalized credit interfaces and user experiences.</p>
-                </div>
-
-                <div class="project">
-                    <h4>Enterprise AI Integration</h4>
-                    <p><strong>Achievement:</strong> Designed scalable, secure AI pipeline interfaces ensuring robust security standards and compliance within large-scale financial data ingestion processes.</p>
-                </div>
-            </div>
-
-            <div class="subsection">
-                <h3>Software Engineer</h3>
-                <div class="meta">Kidar | April 2023 – Present | Bogotá, Colombia</div>
-
-                <div class="project">
-                    <h4>Core SaaS Architecture & Cost Optimization</h4>
-                    <p><strong>Achievement:</strong> Built from the ground up two core internal SaaS platforms (ERP & Time Manager) utilizing Python (FastAPI), MySQL, and AWS.</p>
-                    <p><strong>Impact:</strong> Saved <strong>$18,000 USD/year</strong>, cut project management cycle times by <strong>20%</strong>, and eliminated operational bottlenecks.</p>
-                </div>
-
-                <div class="project">
-                    <h4>Legacy Refactoring to Clean Architecture</h4>
-                    <p><strong>Achievement:</strong> Refactored over <strong>20,000 lines</strong> of legacy code to Clean Architecture in <strong>3 weeks</strong>.</p>
-                    <p><strong>Impact:</strong> Reduced ongoing feature development time by <strong>40%</strong> and improved code maintainability.</p>
-                    <p><strong>Stack:</strong> Python (FastAPI), MySQL, AWS (EC2, RDS/Aurora, API Gateway)</p>
-                </div>
-
-                <div class="project">
-                    <h4>Serverless AI Proof of Concept</h4>
-                    <p><strong>Achievement:</strong> Designed and deployed a serverless PoC integrating <strong>AWS Lambda + Bedrock AgentCore</strong>.</p>
-                    <p><strong>Impact:</strong> Accelerated team technical exploration by <strong>2 weeks</strong>.</p>
-                    <p><strong>Stack:</strong> Python, AWS Lambda, AWS Bedrock, Anthropic Models, Docker</p>
-                </div>
-
-                <div class="project">
-                    <h4>Enterprise Data Workflows</h4>
-                    <p>✓ Streamlined company-wide data architecture and internal information pipelines.</p>
-                    <p>✓ Full stack: Python, React.js, AWS (ECS, EC2, RDS/Aurora, Lambda, API Gateway, VPC), Docker, MySQL, MongoDB, LiteLLM</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects -->
-        <section>
-            <h2>FEATURED PROJECTS</h2>
-
-            <div class="subsection">
-                <h3>Adkio — Intelligent Ad Orchestrator</h3>
-                <p><strong>Repository:</strong> <a href="https://github.com/Andss-ye/Adkio">github.com/Andss-ye/Adkio</a> | <a href="https://adkio.pages.dev/">Demo</a></p>
-                <p><strong>Description:</strong> Automated advertising campaign orchestrator converting natural language specifications into multi-channel marketing campaigns (Meta, TikTok, Google Ads) using Anthropic AI agents behind a REST API, with human approval before publishing.</p>
-                <p><strong>Stack:</strong> Python (FastAPI), React.js, TypeScript, Tailwind CSS, Docker, Supabase, Railway, Anthropic Models</p>
-                <p><strong>Impact:</strong> End-to-end automation of the campaign creation cycle; practical integration of LLMs into a production web platform.</p>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section>
-            <h2>EDUCATION</h2>
-
-            <div class="subsection">
-                <h3>B.S. in Systems Engineering</h3>
-                <div class="meta">Universidad EAN — 6th Semester, In Progress | Bogotá, Colombia</div>
-            </div>
-
-            <div class="subsection">
-                <h3>Technical Degree in Software Programming</h3>
-                <div class="meta">Completed</div>
-            </div>
-        </section>
-
-        <!-- Certifications -->
-        <section>
-            <h2>CERTIFICATIONS</h2>
-            <div class="subsection">
-                <p>✓ <strong>AWS Knowledge: AI-DLC Foundations</strong> (Amazon Web Services) — Specialization in AI Development Lifecycle</p>
-                <p>✓ <strong>Full-Stack Engineering with JavaScript</strong> (CodeSignal) — Frontend and backend competencies</p>
-                <p>✓ <strong>AWS Cloud Foundations</strong> (Amazon Web Services) — Cloud infrastructure fundamentals</p>
-            </div>
-        </section>
-
-        <!-- Languages -->
-        <section>
-            <h2>LANGUAGES</h2>
-            <div class="subsection">
-                <p>🇺🇸 <strong>English</strong> — Professional / Advanced (C1/B2)</p>
-                <p>🇪🇸 <strong>Spanish</strong> — Native Speaker</p>
-            </div>
-        </section>
-
-        <!-- Specialization Areas -->
-        <section>
-            <h2>SPECIALIZATION AREAS</h2>
-            <div class="subsection">
-                <p><strong>1. Cloud Architectures & Enterprise SaaS</strong><br>Design and construction of scalable SaaS platforms on AWS with direct impact on costs and operational efficiency.</p>
-                <p><strong>2. AI Agentic Systems & Data Frameworks</strong><br>AI-driven data ingestion, agent orchestration, RAGs, and secure pipelines for large-scale financial and enterprise environments.</p>
-                <p><strong>3. Full-Stack Engineering with Clean Architecture</strong><br>End-to-end solutions (Python/Java backend, React frontend, AWS infrastructure) using modern methodologies: SDD, TDD, BDD, DDD.</p>
-            </div>
-        </section>
-
-        <!-- Key Differentiators -->
-        <section>
-            <h2>KEY DIFFERENTIATORS</h2>
-            <ul class="highlights">
-                <li><strong>Measurable Business Impact</strong> — $18,000 USD/year saved at Kidar; 50%+ reduction in dev/QA cycles at Scala/Experian</li>
-                <li><strong>AI Agentic Systems & Data Frameworks</strong> — Design and implementation of AI data ingestion pipelines at financial scale</li>
-                <li><strong>Enterprise Architecture</strong> — 20k-line Clean Architecture refactor in 3 weeks; SaaS platforms built from scratch</li>
-                <li><strong>Technical Leadership</strong> — Lead/Principal role on critical data frameworks for DataCrédito Experian</li>
-                <li><strong>Full-Stack Cloud-Native</strong> — Python, Java, React + full AWS (EKS, ECS, Lambda, Aurora, Bedrock)</li>
-                <li><strong>AI-DLC & Modern Methodologies</strong> — SDD, TDD, BDD, DDD applied in real enterprise environments</li>
-            </ul>
-        </section>
-    </div>
+    <h2>Certifications &amp; Languages</h2>
+    <p><strong>Certifications:</strong> AWS Cloud Foundations · AI-DLC Foundations (AWS) · Full-Stack Engineering with JavaScript (CodeSignal)</p>
+    <p><strong>Languages:</strong> Spanish (native) · English (advanced)</p>
 </body>
 </html>
