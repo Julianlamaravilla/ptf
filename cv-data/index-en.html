@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <title>Julián Restrepo - CV (EN)</title>
     <style>
-        @page { size: Letter; margin: 0.45in 0.7in; }
+        @page { size: Letter; margin: 0.4in 0.6in; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Times New Roman', Times, serif; font-size: 10pt; line-height: 1.28; color: #1a1a1a; }
+        body { font-family: 'Times New Roman', Times, serif; font-size: 9.6pt; line-height: 1.22; color: #1a1a1a; }
         a { color: #2f5bb7; text-decoration: none; }
         header { text-align: center; margin-bottom: 10pt; }
         h1 { font-size: 22pt; color: #1f3864; line-height: 1.1; }
         .headline { color: #2f5bb7; font-weight: bold; font-size: 11.5pt; margin: 2pt 0; }
         .contact { font-size: 9.5pt; }
-        h2 { font-size: 11pt; color: #1f3864; text-transform: uppercase; border-bottom: 1.2pt solid #1f3864; padding-bottom: 1pt; margin: 8pt 0 4pt; }
+        h2 { font-size: 11pt; color: #1f3864; text-transform: uppercase; border-bottom: 1.2pt solid #1f3864; padding-bottom: 1pt; margin: 7pt 0 3pt; }
         .row { display: flex; justify-content: space-between; gap: 12pt; }
         .row .right { font-style: italic; white-space: nowrap; }
         h3 { font-size: 10.5pt; color: #2f5bb7; margin-top: 4pt; }
@@ -24,61 +24,62 @@
 <body>
     <header>
         <h1>Julián Andrés Restrepo Castaño</h1>
-        <div class="headline">Java Software Engineer · Spring Boot · Microservices · REST APIs · AWS</div>
+        <div class="headline">Software Engineer · AI Engineering &amp; Backend Systems</div>
         <div class="contact">Bogotá, Colombia (Hybrid) · +57 333 750 8344 · <a href="mailto:julianrestrepo012@gmail.com">julianrestrepo012@gmail.com</a> · <a href="https://www.linkedin.com/in/jarestrepo/">linkedin.com/in/jarestrepo</a></div>
         <div class="contact"><a href="https://github.com/Julianlamaravilla">github.com/Julianlamaravilla</a> · Portfolio: <a href="https://ptf-theta.vercel.app">ptf-theta.vercel.app</a></div>
     </header>
 
     <h2>Professional Summary</h2>
-    <p>Software Engineer specialized in <strong>Java and Spring Boot</strong>, with experience building REST APIs and microservices deployed on AWS for enterprise projects in the financial sector (DataCrédito Experian). Built the Bitácora backend from scratch, now in production. I work with Scrum, automated testing (JUnit, Mockito), CI/CD and Clean Architecture.</p>
+    <p>Software engineer shipping AI systems to production. At DataCrédito Experian I built <strong>EDF</strong>, an AI-assisted ingestion framework (<strong>50%+ faster</strong> ingestion), and a <strong>credit chatbot on an AWS Bedrock agent harness</strong>. I also ship ML and multi-agent products. Strong backend foundation (Java, Scala, Python, AWS, CI/CD, testing); I build with AI daily using AI-DLC and ODD.</p>
 
     <h2>Professional Experience</h2>
-    <div class="row"><div><strong>Kidar</strong> · <em>Java Software Engineer</em></div><div class="right">May 2026 – Present · Bogotá</div></div>
+    <div class="row"><div><strong>Kidar</strong> · <em>Software Engineer, AI Engineering &amp; Backend</em></div><div class="right">May 2026 – Present · Bogotá</div></div>
+    <h3>DataCrédito Experian · EDF, AI Data Ingestion Framework — Scala, AWS, Generative AI</h3>
+    <ul>
+        <li>Co-designed and built EDF, an AI-assisted data ingestion framework used by data engineering teams at DataCrédito Experian.</li>
+        <li>Made data ingestion <strong>50%+ faster</strong> by wrapping generative models into a reusable framework embedded in the engineering workflow.</li>
+    </ul>
+    <h3>DataCrédito Experian · Credit Chatbot — AWS Bedrock, Java, Angular, Microservices</h3>
+    <ul>
+        <li>Built a production credit chatbot on an <strong>AWS Bedrock agent harness</strong> that personalizes the credit experience, integrated with <strong>5 microservices</strong> under strict financial-sector security and compliance requirements.</li>
+    </ul>
     <h3>Bitácora — Java, Spring Boot, React, AWS</h3>
     <ul>
-        <li>Built the Spring Boot backend and the React frontend from scratch; the platform saves <strong>USD 18,000 per year</strong>.</li>
-        <li>Designed the REST APIs and the data model, with unit tests in JUnit and Mockito.</li>
-        <li>Deployed on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker and automated CI/CD.</li>
-    </ul>
-    <h3>DataCrédito Experian · Credit Chatbot — Java, Angular, Microservices</h3>
-    <ul>
-        <li>Developed a chatbot that personalizes the credit interface, integrated with <strong>5 impacted microservices</strong>, under strict financial security standards.</li>
-    </ul>
-    <h3>DataCrédito Experian · AI Ingestion Framework — Scala, AWS</h3>
-    <ul>
-        <li>Took part in the design and development of an AI-assisted data ingestion framework in Scala: ingestions <strong>over 50% faster</strong>.</li>
+        <li>Built end to end (Spring Boot, React), deployed on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker, CI/CD and JUnit/Mockito tests; in production, saving <strong>USD 18,000/year</strong>.</li>
     </ul>
     <h3>Internal Tools — Python, FastAPI, MySQL, AWS</h3>
     <ul>
-        <li>ERP and time tracking with automated tests: <strong>−20%</strong> in the project management cycle.</li>
-        <li>Refactored over 20,000 lines of legacy code to Clean Architecture: <strong>−40%</strong> time per new feature.</li>
+        <li>ERP and time tracking with automated tests (<strong>−20%</strong> project management cycle); refactored 20,000+ legacy lines to Clean Architecture (<strong>−40%</strong> time per feature).</li>
     </ul>
     <div class="row" style="margin-top:5pt"><div><strong>Independent</strong> · <em>Freelance Developer</em></div><div class="right">Oct 2025 – Apr 2026 · Remote</div></div>
-    <h3>JavaScript, TypeScript, Node.js, Cloudflare</h3>
     <ul>
-        <li>Developed websites, web applications and Node.js APIs for clients, from requirements to deployment on Cloudflare.</li>
+        <li>Developed websites, web applications and Node.js APIs for clients, from requirements to deployment on Cloudflare (JavaScript, TypeScript).</li>
     </ul>
 
-    <h2>Projects</h2>
-    <div class="row"><div><strong>Sentinel — Yuno Hackathon (48 h, selected)</strong> · <em>Microservices, Fintech</em></div><div class="right">Dec 2025</div></div>
-    <ul><li>Real-time payment anomaly detection: 7 microservices on Docker Compose, PostgreSQL and a dashboard.</li></ul>
-    <div class="row"><div><strong>Adkio — 2nd place, GTM Hackathon Bogotá 2026</strong> · <em>FastAPI, React</em></div><div class="right">May 2026</div></div>
-    <ul><li>Turns a brief into Meta, TikTok and Google Ads campaigns with AI agents · <a href="https://adkio.pages.dev">adkio.pages.dev</a></li></ul>
+    <h2>AI &amp; ML Projects</h2>
+    <div class="row"><div><strong>IMA — Environmental Monitoring Index</strong> · <em>Python, FastAPI, LSTM, XGBoost, React, AWS EC2</em></div><div class="right">Jan 2026 – May 2026</div></div>
+    <ul>
+        <li>Built a hydrometeorological forecasting PWA serving <strong>LSTM and XGBoost</strong> models through FastAPI on AWS EC2, with 24-hour multi-step forecasts and automated IDEAM-level alerts.</li>
+        <li>Compared models on evaluation metrics (MAE, RMSE, R², F1, AUC); continuous alert checks every 3 minutes with push notifications.</li>
+    </ul>
+    <div class="row"><div><strong>Adkio — 2nd place, GTM Hackathon Bogotá 2026</strong> · <em>Multi-agent, FastAPI, React</em></div><div class="right">May 2026</div></div>
+    <ul><li>Multi-agent system that decomposes a marketing brief into platform-specific campaigns for Meta, TikTok and Google Ads · <a href="https://adkio.pages.dev">adkio.pages.dev</a></li></ul>
+    <div class="row"><div><strong>Sentinel — Yuno Hackathon (48 h, selected)</strong> · <em>Distributed systems, Fintech</em></div><div class="right">Dec 2025</div></div>
+    <ul><li>Real-time payment anomaly detection across <strong>7 Dockerized microservices</strong> with PostgreSQL, built in 48 hours.</li></ul>
 
     <h2>Education</h2>
     <div class="row"><div><strong>Universidad EAN</strong> · <em>B.S. in Systems Engineering</em></div><div class="right">Expected graduation: Jun 2027</div></div>
     <div class="row"><div><strong>Technical Degree in Software Programming</strong></div><div class="right">Completed</div></div>
 
     <h2>Technical Skills</h2>
-    <p><strong>Java &amp; backend:</strong> Java, Spring Boot, REST APIs, microservices, Clean Architecture</p>
-    <p><strong>Other languages:</strong> Scala, Python (FastAPI), Node.js, Go</p>
-    <p><strong>Frontend:</strong> Angular, React, TypeScript, JavaScript</p>
-    <p><strong>DevOps &amp; cloud:</strong> AWS (ECS, API Gateway, Aurora, S3, Lambda), Docker, CI/CD, Git, Azure DevOps</p>
-    <p><strong>Testing:</strong> JUnit, Mockito, Postman, TDD · Scrum</p>
-    <p><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB, Redis</p>
+    <p><strong>AI &amp; ML:</strong> AWS Bedrock (agent harness), multi-agent systems, generative-AI frameworks, LSTM, XGBoost, model serving and evaluation</p>
+    <p><strong>Languages &amp; backend:</strong> Java, Scala, Python, Go, TypeScript · Spring Boot, FastAPI, Node.js, microservices, Clean Architecture</p>
+    <p><strong>Cloud &amp; DevOps:</strong> AWS (Bedrock, ECS, Lambda, API Gateway, Aurora, S3, EC2), Docker, CI/CD, Git, Azure DevOps</p>
+    <p><strong>Data &amp; frontend:</strong> PostgreSQL, MySQL, MongoDB, Redis · React, Angular, PWA</p>
+    <p><strong>Testing &amp; practices:</strong> JUnit, Mockito, Postman, TDD, Scrum, AI-DLC, ODD</p>
 
     <h2>Certifications &amp; Languages</h2>
-    <p><strong>Certifications:</strong> AWS Cloud Foundations · AI-DLC Foundations (AWS) · Full-Stack Engineering with JavaScript (CodeSignal)</p>
+    <p><strong>Certifications:</strong> AI-DLC Foundations (AWS) · AWS Cloud Foundations · Full-Stack Engineering with JavaScript (CodeSignal)</p>
     <p><strong>Languages:</strong> Spanish (native) · English (advanced)</p>
 </body>
 </html>
