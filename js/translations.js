@@ -9,51 +9,58 @@ const translations = {
             "Contact"
         ],
         "lang_btn": "ES",
-        "hero_badge": "Java Software Engineer | Spring Boot · Microservices · AWS",
-        "hero_title": "I Build Java Backends That Run in Production",
-        "hero_desc": "Software Engineer specialized in Java and Spring Boot. I build REST APIs and microservices deployed on AWS for enterprise projects in the financial sector.",
+        "hero_badge": "AI Software Engineer | Agent Harnesses · ML · Backend Systems",
+        "hero_title": "I Build AI Systems That Ship to Production",
+        "hero_desc": "Software engineer building the layer between models and real work: agent harnesses on AWS Bedrock, AI-assisted dev tooling and ML models in production, on solid Java, Scala and Python backends.",
         "cta_projects": "View Projects",
         "cta_contact": "Contact",
         "cta_download": "Download CV",
         "avail": "Open to opportunities",
         "about_title": "About me",
-        "about_sub": "Java backends, microservices and cloud delivery",
+        "about_sub": "AI systems, agent harnesses and the backends that run them",
         "about": [
-            "Software Engineer specialized in <strong>Java and Spring Boot</strong>, building REST APIs and microservices deployed on AWS for enterprise projects in the financial sector (DataCrédito Experian).",
-            "At <strong>Kidar</strong>, I built the <strong>Bitácora</strong> backend (Spring Boot) and frontend (React) from scratch. It is now in production and saves <strong>USD 18,000 per year</strong>.",
-            "For <strong>DataCrédito Experian</strong>, I developed a credit chatbot integrated with <strong>5 microservices</strong> and took part in an AI-assisted ingestion framework in Scala that made ingestions over <strong>50% faster</strong>.",
-            "I work with <strong>Scrum, automated testing (JUnit, Mockito), CI/CD and Clean Architecture</strong>, deploying on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker.",
-            "Beyond Java, I also build with Scala, Python (FastAPI), Node.js, Go, Angular and React, owning features from the API to the deployment."
+            "Software engineer focused on <strong>AI engineering and backend systems</strong>. I build the layer between models and real work, for enterprise clients in the financial sector (<strong>DataCrédito Experian</strong>).",
+            "I co-designed and built <strong>EDF</strong>, an AI-assisted data ingestion framework (Scala, AWS) used by data engineering teams. It wraps generative models into the engineering workflow and made ingestion <strong>over 50% faster</strong>.",
+            "I built a production credit chatbot on an <strong>AWS Bedrock agent harness</strong>, integrated with <strong>5 microservices</strong> under strict financial-sector security and compliance requirements.",
+            "Outside client work I ship ML and agent products: <strong>IMA</strong>, serving LSTM and XGBoost forecasting models in production, and <strong>Adkio</strong>, a multi-agent system that took <strong>2nd place</strong> at GTM Hackathon Bogotá 2026.",
+            "My foundation is backend engineering: Java and Spring Boot (Bitácora, in production and saving <strong>USD 18,000 per year</strong>), AWS, CI/CD and automated testing. I build with AI every day using <strong>AI-DLC and ODD</strong>."
         ],
         "skills_title": "Skills & Tech Stack",
         "skills_sub": "Tools and technologies I master",
         "skill_heads": [
-            "Java & Backend",
-            "Other Languages",
-            "Frontend",
+            "AI & ML",
+            "Backend",
             "Cloud & DevOps",
-            "Testing",
-            "Databases"
+            "Testing & Quality",
+            "Data",
+            "Frontend"
         ],
         "methods_head": "Methodologies",
         "exp_title": "Experience",
         "exp_sub": "My professional journey",
         "exp": [
             {
-                "meta": "Kidar • Java Software Engineer • May 2026 – Present",
-                "job": "Bitácora — Java, Spring Boot, React, AWS",
+                "meta": "Kidar • DataCrédito Experian • Software Engineer, AI Engineering & Backend • May 2026 – Present",
+                "job": "EDF: AI Data Ingestion Framework — Scala, AWS, Generative AI",
                 "b": [
-                    "<strong>Built from scratch:</strong> Built the Spring Boot backend and the React frontend from scratch; the platform is in production and saves <strong>USD 18,000 per year</strong>.",
-                    "<strong>APIs & data model:</strong> Designed the REST APIs and the data model, with unit tests in JUnit and Mockito.",
-                    "<strong>AWS deployment:</strong> Deployed on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker and automated CI/CD."
+                    "<strong>AI dev tooling:</strong> Co-designed and built EDF, an AI-assisted data ingestion framework used by data engineering teams at DataCrédito Experian.",
+                    "<strong>Impact:</strong> Made data ingestion <strong>over 50% faster</strong> by wrapping generative models into a reusable framework embedded in the engineering workflow."
                 ]
             },
             {
                 "meta": "Kidar • DataCrédito Experian (financial sector)",
-                "job": "Java, Angular, Scala, AWS, Microservices",
+                "job": "Credit Chatbot on AWS Bedrock — Bedrock, Java, Angular, Microservices",
                 "b": [
-                    "<strong>Credit chatbot:</strong> Developed a chatbot that personalizes the credit interface, integrated with <strong>5 impacted microservices</strong>, under strict financial security standards.",
-                    "<strong>AI ingestion framework:</strong> Took part in the design and development of an AI-assisted data ingestion framework in Scala: ingestions <strong>over 50% faster</strong>."
+                    "<strong>Agent in production:</strong> Built a credit chatbot on an AWS Bedrock agent harness that personalizes the user's credit experience, integrated with <strong>5 microservices</strong>.",
+                    "<strong>Compliance:</strong> Delivered under strict financial-sector security and compliance requirements."
+                ]
+            },
+            {
+                "meta": "Kidar • Bitácora",
+                "job": "Java, Spring Boot, React, AWS",
+                "b": [
+                    "<strong>Built end to end:</strong> Built the Spring Boot backend and the React frontend from scratch; the platform is in production and saves <strong>USD 18,000 per year</strong>.",
+                    "<strong>AWS delivery:</strong> Deployed on AWS (ECS, API Gateway, Aurora, S3, Lambda) with Docker and automated CI/CD; unit-tested with JUnit and Mockito."
                 ]
             },
             {
@@ -73,34 +80,30 @@ const translations = {
             }
         ],
         "proj_title": "Featured Projects",
-        "proj_sub": "Work that demonstrates my expertise",
+        "proj_sub": "AI, ML and distributed systems I have shipped",
         "proj": {
-            "audit": {
-                "title": "Accounting Audit Platform (Brazil)",
-                "badge": "Jul 2026 – Present · Go, AWS",
-                "desc": "<strong>Founder and backend developer:</strong> Go services and AWS infrastructure for a product in operation, with secure development (OWASP) and agile delivery."
+            "ima": {
+                "title": "IMA: Environmental Monitoring Index",
+                "badge": "Jan – May 2026 · ML in production",
+                "desc": "<strong>Forecasting PWA serving LSTM and XGBoost models</strong> through FastAPI on AWS EC2: 24-hour multi-step precipitation forecasts and automated IDEAM-level alerts, with models compared on MAE, RMSE, F1 and AUC."
             },
             "adkio": {
                 "title": "Adkio",
-                "desc": "<strong>2nd place, GTM Hackathon Bogotá 2026.</strong> Turns a brief into campaigns for Meta, TikTok and Google Ads with AI agents and human approval as a control."
+                "desc": "<strong>2nd place, GTM Hackathon Bogotá 2026.</strong> Multi-agent system that decomposes one marketing brief into platform-specific campaigns for Meta, TikTok and Google Ads, with human approval as a control."
             },
             "sentinel": {
                 "title": "Sentinel",
                 "badge": "Dec 2025 · Fintech, microservices",
                 "desc": "<strong>Yuno Hackathon (48 h, selected).</strong> Seven microservices on Docker Compose and PostgreSQL, with a dashboard that detects payment anomalies in real time."
             },
-            "erp": {
-                "title": "ERP Kidar",
-                "desc": "<strong>Internal ERP and time-tracking tool</strong> built with Clean Architecture and automated tests: −20% in the project-management cycle.",
-                "note": "Corporate project — Private code"
+            "audit": {
+                "title": "Accounting Audit Platform (Brazil)",
+                "badge": "Jul 2026 – Present · Go, AWS",
+                "desc": "<strong>Founder and backend developer:</strong> Go services and AWS infrastructure for a product in operation, with secure development (OWASP) and agile delivery."
             },
             "jojun": {
                 "title": "Jojun",
                 "desc": "<strong>P2P clipboard for the terminal</strong>: two laptops join the same room, one sends a snippet and the other receives it. No Discord, USB, or server."
-            },
-            "argenta": {
-                "title": "Argenta Health Care",
-                "desc": "<strong>Institutional hospital demo.</strong> The UI looks like a real product: services home, doctor directory, locations, scheduling, patient portal, payments, telemedicine, ES/EN, and accessibility controls. Built with Vite and mock data — no clinical backend."
             }
         },
         "edu_title": "Education & Certifications",
@@ -112,7 +115,7 @@ const translations = {
         "cert_list": "<li>AWS Cloud Foundations — Amazon Web Services</li><li>AI-DLC Foundations — Amazon Web Services</li><li>Full-Stack Engineering with JavaScript — CodeSignal</li>",
         "lang_list": "<li>English — Advanced</li><li>Spanish — Native</li>",
         "contact_title": "Let's Talk",
-        "contact_sub": "I am available for opportunities, technical consultations and collaborations in Java backend, microservices and cloud architecture.",
+        "contact_sub": "I am available for opportunities, technical consultations and collaborations in AI engineering, agent infrastructure and backend systems.",
         "contact_email": "Send Email",
         "contact_li": "Connect on LinkedIn",
         "footer": "© 2026 Julián Andrés Restrepo Castaño. Built with attention to detail."
@@ -127,51 +130,58 @@ const translations = {
             "Contacto"
         ],
         "lang_btn": "EN",
-        "hero_badge": "Java Software Engineer | Spring Boot · Microservicios · AWS",
-        "hero_title": "Construyo Backends en Java que Corren en Producción",
-        "hero_desc": "Software Engineer especializado en Java y Spring Boot. Construyo APIs REST y microservicios desplegados en AWS para proyectos empresariales del sector financiero.",
+        "hero_badge": "AI Software Engineer | Agent Harnesses · ML · Sistemas Backend",
+        "hero_title": "Construyo Sistemas de IA que Llegan a Producción",
+        "hero_desc": "Ingeniero de software que construye la capa entre los modelos y el trabajo real: harnesses de agentes en AWS Bedrock, herramientas de desarrollo asistidas por IA y modelos de ML en producción, sobre backends sólidos en Java, Scala y Python.",
         "cta_projects": "Ver Proyectos",
         "cta_contact": "Contacto",
         "cta_download": "Descargar CV",
         "avail": "Disponible para oportunidades",
         "about_title": "Sobre mí",
-        "about_sub": "Backends en Java, microservicios y despliegue en la nube",
+        "about_sub": "Sistemas de IA, harnesses de agentes y los backends que los ejecutan",
         "about": [
-            "Software Engineer especializado en <strong>Java y Spring Boot</strong>, construyendo APIs REST y microservicios desplegados en AWS para proyectos empresariales del sector financiero (DataCrédito Experian).",
-            "En <strong>Kidar</strong> construí desde cero el backend (Spring Boot) y el frontend (React) de <strong>Bitácora</strong>. Hoy está en producción y ahorra <strong>USD 18.000 al año</strong>.",
-            "Para <strong>DataCrédito Experian</strong> desarrollé un chatbot de crédito integrado con <strong>5 microservicios</strong> y participé en un framework de ingesta asistido por IA en Scala con ingestas <strong>más de 50 % más rápidas</strong>.",
-            "Trabajo con <strong>Scrum, pruebas automatizadas (JUnit, Mockito), CI/CD y Clean Architecture</strong>, desplegando en AWS (ECS, API Gateway, Aurora, S3, Lambda) con Docker.",
-            "Además de Java, construyo con Scala, Python (FastAPI), Node.js, Go, Angular y React, llevando funcionalidades desde la API hasta el despliegue."
+            "Ingeniero de software enfocado en <strong>ingeniería de IA y sistemas backend</strong>. Construyo la capa entre los modelos y el trabajo real, para clientes empresariales del sector financiero (<strong>DataCrédito Experian</strong>).",
+            "Co-diseñé y construí <strong>EDF</strong>, un framework de ingesta de datos asistido por IA (Scala, AWS) que usan los equipos de ingeniería de datos. Integra modelos generativos al flujo de ingeniería e hizo las ingestas <strong>más de 50 % más rápidas</strong>.",
+            "Construí un chatbot de crédito en producción sobre un <strong>harness de agente en AWS Bedrock</strong>, integrado con <strong>5 microservicios</strong> bajo estrictas normas de seguridad y cumplimiento del sector financiero.",
+            "Fuera del trabajo con clientes construyo productos de ML y agentes: <strong>IMA</strong>, que sirve modelos de pronóstico LSTM y XGBoost en producción, y <strong>Adkio</strong>, un sistema multi-agente que obtuvo el <strong>2.º puesto</strong> en el GTM Hackathon Bogotá 2026.",
+            "Mi base es la ingeniería backend: Java y Spring Boot (Bitácora, en producción y ahorrando <strong>USD 18.000 al año</strong>), AWS, CI/CD y pruebas automatizadas. Desarrollo con IA a diario usando <strong>AI-DLC y ODD</strong>."
         ],
         "skills_title": "Skills & Stack Tecnológico",
         "skills_sub": "Herramientas y tecnologías que domino",
         "skill_heads": [
-            "Java y Backend",
-            "Otros Lenguajes",
-            "Frontend",
-            "Nube y DevOps",
-            "Pruebas",
-            "Bases de Datos"
+            "IA y ML",
+            "Backend",
+            "Cloud y DevOps",
+            "Pruebas y calidad",
+            "Datos",
+            "Frontend"
         ],
         "methods_head": "Metodologías",
         "exp_title": "Experiencia",
         "exp_sub": "Mi trayectoria profesional",
         "exp": [
             {
-                "meta": "Kidar • Java Software Engineer • May 2026 – Actualidad",
-                "job": "Bitácora — Java, Spring Boot, React, AWS",
+                "meta": "Kidar • DataCrédito Experian • Software Engineer, AI Engineering & Backend • May 2026 – Actualidad",
+                "job": "EDF: framework de ingesta de datos con IA — Scala, AWS, IA generativa",
                 "b": [
-                    "<strong>Construida desde cero:</strong> Construí desde cero el backend en Spring Boot y el frontend en React; la plataforma está en producción y ahorra <strong>USD 18.000 al año</strong>.",
-                    "<strong>APIs y modelo de datos:</strong> Diseñé las APIs REST y el modelo de datos, con pruebas unitarias en JUnit y Mockito.",
-                    "<strong>Despliegue en AWS:</strong> Desplegué en AWS (ECS, API Gateway, Aurora, S3, Lambda) con Docker y CI/CD automatizado."
+                    "<strong>Tooling de IA:</strong> Co-diseñé y construí EDF, un framework de ingesta de datos asistido por IA que usan los equipos de ingeniería de datos de DataCrédito Experian.",
+                    "<strong>Impacto:</strong> Ingestas <strong>más de 50 % más rápidas</strong>, integrando modelos generativos en un framework reutilizable dentro del flujo de ingeniería."
                 ]
             },
             {
                 "meta": "Kidar • DataCrédito Experian (sector financiero)",
-                "job": "Java, Angular, Scala, AWS, Microservicios",
+                "job": "Chatbot de crédito sobre AWS Bedrock — Bedrock, Java, Angular, Microservicios",
                 "b": [
-                    "<strong>Chatbot de crédito:</strong> Desarrollé un chatbot que personaliza la interfaz de crédito, integrado con <strong>5 microservicios</strong> impactados, bajo estrictas normas de seguridad financiera.",
-                    "<strong>Framework de ingesta con IA:</strong> Participé en el diseño y desarrollo de un framework de ingesta de datos asistido por IA en Scala: ingestas <strong>más de 50 % más rápidas</strong>."
+                    "<strong>Agente en producción:</strong> Construí un chatbot de crédito sobre un harness de agente en AWS Bedrock que personaliza la experiencia de crédito del usuario, integrado con <strong>5 microservicios</strong>.",
+                    "<strong>Cumplimiento:</strong> Entregado bajo estrictas normas de seguridad y cumplimiento del sector financiero."
+                ]
+            },
+            {
+                "meta": "Kidar • Bitácora",
+                "job": "Java, Spring Boot, React, AWS",
+                "b": [
+                    "<strong>De punta a punta:</strong> Construí desde cero el backend en Spring Boot y el frontend en React; la plataforma está en producción y ahorra <strong>USD 18.000 al año</strong>.",
+                    "<strong>Despliegue en AWS:</strong> Desplegado en AWS (ECS, API Gateway, Aurora, S3, Lambda) con Docker y CI/CD automatizado; pruebas unitarias con JUnit y Mockito."
                 ]
             },
             {
@@ -191,34 +201,30 @@ const translations = {
             }
         ],
         "proj_title": "Proyectos Destacados",
-        "proj_sub": "Trabajo que demuestra mi expertise",
+        "proj_sub": "Sistemas de IA, ML y distribuidos que he llevado a producción",
         "proj": {
-            "audit": {
-                "title": "Plataforma de auditoría contable (Brasil)",
-                "badge": "Jul 2026 – Actualidad · Go, AWS",
-                "desc": "<strong>Fundador y desarrollador backend:</strong> servicios en Go e infraestructura en AWS para un producto en operación, con desarrollo seguro (OWASP) y entrega ágil."
+            "ima": {
+                "title": "IMA: Índice de Monitoreo Ambiental",
+                "badge": "Ene – May 2026 · ML en producción",
+                "desc": "<strong>PWA de pronóstico que sirve modelos LSTM y XGBoost</strong> mediante FastAPI en AWS EC2: pronósticos de precipitación multi-paso a 24 h y alertas automáticas según niveles del IDEAM, con modelos comparados por MAE, RMSE, F1 y AUC."
             },
             "adkio": {
                 "title": "Adkio",
-                "desc": "<strong>2.º puesto, GTM Hackathon Bogotá 2026.</strong> Convierte un brief en campañas para Meta, TikTok y Google Ads con agentes de IA y aprobación humana como control."
+                "desc": "<strong>2.º puesto, GTM Hackathon Bogotá 2026.</strong> Sistema multi-agente que descompone un brief de marketing en campañas específicas para Meta, TikTok y Google Ads, con aprobación humana como control."
             },
             "sentinel": {
                 "title": "Sentinel",
                 "badge": "Dic 2025 · Fintech, microservicios",
                 "desc": "<strong>Hackathon Yuno (48 h, seleccionado).</strong> Siete microservicios en Docker Compose y PostgreSQL con dashboard que detectan anomalías en pagos en tiempo real."
             },
-            "erp": {
-                "title": "ERP Kidar",
-                "desc": "<strong>ERP y herramienta de control de tiempos internos</strong> con Clean Architecture y pruebas automatizadas: −20 % en el ciclo de gestión de proyectos.",
-                "note": "Proyecto corporativo — Código privado"
+            "audit": {
+                "title": "Plataforma de auditoría contable (Brasil)",
+                "badge": "Jul 2026 – Actualidad · Go, AWS",
+                "desc": "<strong>Fundador y desarrollador backend:</strong> servicios en Go e infraestructura en AWS para un producto en operación, con desarrollo seguro (OWASP) y entrega ágil."
             },
             "jojun": {
                 "title": "Jojun",
                 "desc": "<strong>Portapapeles P2P para la terminal</strong>: dos laptops se conectan a la misma sala, una envía un snippet y la otra lo recibe. Sin Discord, USB ni servidor."
-            },
-            "argenta": {
-                "title": "Argenta Health Care",
-                "desc": "<strong>Sitio demo de Argenta Health Care.</strong> La interfaz parece un producto real: home de servicios, directorio médico, sedes, agendamiento, portal del paciente, pagos, telemedicina, bilingüe ES/EN y controles de accesibilidad. Hecha con Vite y datos mock, sin backend clínico."
             }
         },
         "edu_title": "Educación & Certificaciones",
@@ -230,12 +236,13 @@ const translations = {
         "cert_list": "<li>AWS Cloud Foundations — Amazon Web Services</li><li>AI-DLC Foundations — Amazon Web Services</li><li>Full-Stack Engineering with JavaScript — CodeSignal</li>",
         "lang_list": "<li>Español — Nativo</li><li>Inglés — Avanzado</li>",
         "contact_title": "¿Hablamos?",
-        "contact_sub": "Estoy disponible para oportunidades, consultas técnicas y colaboraciones en backend Java, microservicios y arquitectura cloud.",
+        "contact_sub": "Estoy disponible para oportunidades, consultas técnicas y colaboraciones en ingeniería de IA, infraestructura de agentes y sistemas backend.",
         "contact_email": "Enviar Email",
         "contact_li": "Conectar en LinkedIn",
         "footer": "© 2026 Julián Andrés Restrepo Castaño. Construido con atención al detalle."
     }
 };
+
 
 function setLanguage(lang) {
     localStorage.setItem('portfolio-language', lang);
